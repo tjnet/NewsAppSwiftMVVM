@@ -10,7 +10,7 @@ The app uses CocoaPods for handling third-party dependencies. To build the app, 
 
 - 1.2: A lot has been refactored, and a lot of protocols and protocol extensions has been added. Watch app should now work without the phone.
 - 1.1:　Apple Watch support using watchOS 2.
-- 1.0: Initial version. Supports RAC 4 and Swift 2.
+- 1.0: Initial version. Supports Xcode7.3+ and Swift 2.
 
 
 ## User Features
@@ -25,22 +25,35 @@ The app uses CocoaPods for handling third-party dependencies. To build the app, 
 
 - [ ] Move base URL to Settings for easy customization
 - [ ] Cancel network requests when the associated view becomes inactive
-- [ ] Write tests for models
-- [ ] Write tests for view models
+- [x] Write tests for models
+- [x] Write tests for view models
 - [ ] Write tests for helpers and store
+- [x] Write models
+- [x] Write view models
+- [ ] Write tableviewcell
+- [ ] Write viewcontrollers
 - [ ] Make backend in Swift and move to this repo.
 
 ## Useful resources
 
 ### sample for MVP
 
-- [katleta3000/MVVM_lesson: Project for MVVM webinar](https://github.com/katleta3000/MVVM_lesson)
+- [RxSwift/RxExample/RxExample/Examples/WikipediaImageSearch at master · ReactiveX/RxSwift](https://github.com/ReactiveX/RxSwift/tree/master/RxExample/RxExample/Examples/WikipediaImageSearch) original
+- [mafmoff/RxDriveRSSFeed](https://github.com/mafmoff/RxDriveRSSFeed)
+- [marinbenc/ReactiveWeatherExample: A simple iOS weather app using the MVVM pattern and RxSwift framework.](https://github.com/marinbenc/ReactiveWeatherExample)
+- [PiXeL16/SwiftTMDB: A sample movie app that I build to play with Swift, Alamofire, Moya, RxViewModel, RxSwift, etc](https://github.com/PiXeL16/SwiftTMDB)
+- [katleta3000/MVVM_lesson: Project for MVVM webinar](https://github.com/katleta3000/MVVM_lesson) Basic
+- [rickyngk/swift-mvvm: Swift MVVM sample](https://github.com/rickyngk/swift-mvvm) RxSwift
 
 ### sample for refactoring
 
 - [ColinEberhardt/ReactiveTwitterSearch: A ReactiveCocoa 4.0 MVVM example](https://github.com/ColinEberhardt/ReactiveTwitterSearch)
 - [TodaysReactiveMenu](https://github.com/s0mmer/TodaysReactiveMenu/blob/develop/README.md)
 - [SwiftGoal](https://github.com/richeterre/SwiftGoal)
+
+### sample for testing(XCTest)
+
+- [rickyngk/swift-mvvm: Swift MVVM sample](https://github.com/rickyngk/swift-mvvm)
 
 ## Screenshots
 

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EntryTableViewCell" rowHeight="109" id="bcx-uD-Bsu" customClass="EntryTableViewCell" customModule="NewsAppSwiftMVVM" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bcx-uD-Bsu" id="l3M-vJ-Flh">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="119"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMV-7m-r9X">
+                        <rect key="frame" x="92" y="8" width="220" height="80"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UnderComputer-48.png" translatesAutoresizingMaskIntoConstraints="NO" id="u8N-zq-e2F">
+                        <rect key="frame" x="8" y="8" width="80" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="MXu-BV-HYh"/>
+                            <constraint firstAttribute="height" constant="80" id="jWR-wm-9zL"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="QMV-7m-r9X" secondAttribute="trailing" id="0WN-wc-KLb"/>
+                    <constraint firstAttribute="topMargin" secondItem="QMV-7m-r9X" secondAttribute="top" id="B9N-Ze-j2p"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="QMV-7m-r9X" secondAttribute="bottom" constant="23" id="Cqh-uu-Ybg"/>
+                    <constraint firstItem="QMV-7m-r9X" firstAttribute="leading" secondItem="u8N-zq-e2F" secondAttribute="trailing" constant="4" id="IfZ-iX-0qw"/>
+                    <constraint firstAttribute="topMargin" secondItem="u8N-zq-e2F" secondAttribute="top" id="rck-vl-Rjx"/>
+                    <constraint firstItem="QMV-7m-r9X" firstAttribute="leading" secondItem="l3M-vJ-Flh" secondAttribute="leadingMargin" constant="84" id="tlR-DF-ZlY"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="u8N-zq-e2F" secondAttribute="leading" id="y7f-Da-VNz"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="thumbnailView" destination="u8N-zq-e2F" id="wIj-QE-UYL"/>
+                <outlet property="titleLabel" destination="QMV-7m-r9X" id="Rg5-h7-mtf"/>
+            </connections>
+            <point key="canvasLocation" x="598" y="97"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="UnderComputer-48.png" width="48" height="48"/>
+    </resources>
+</document>

@@ -1,0 +1,6 @@
+framework module Pods_NewsAppSwiftMVVM {
+  umbrella header "Pods-NewsAppSwiftMVVM-umbrella.h"
+
+  export *
+  module * { export * }
+}
