@@ -2,6 +2,10 @@
 
 NOTE: This is work in progress.
 
+## Screenshots
+
+![20160111_23_35](https://cloud.githubusercontent.com/assets/901084/12236377/b2c84b28-b8bc-11e5-815f-863fdc4f687a.gif)
+
 ## Setup
 
 The app uses CocoaPods for handling third-party dependencies. To build the app, simply clone the repository and then run ``pod install``.
@@ -55,7 +59,4 @@ The app uses CocoaPods for handling third-party dependencies. To build the app, 
 
 - [rickyngk/swift-mvvm: Swift MVVM sample](https://github.com/rickyngk/swift-mvvm)
 
-## Screenshots
-
-![20160111_23_35](https://cloud.githubusercontent.com/assets/901084/12236377/b2c84b28-b8bc-11e5-815f-863fdc4f687a.gif)
 
