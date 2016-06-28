@@ -1,4 +1,4 @@
-**NewsAppSwiftMVVM** is an example app exploring ReactiveCocoa 4, MVVM, Swift 2.
+**NewsAppSwiftMVVM** is an example app exploring RxSwift, MVVM, Swift 2.
 
 NOTE: This is work in progress.
 
