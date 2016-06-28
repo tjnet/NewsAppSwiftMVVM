@@ -15,7 +15,7 @@ The app uses CocoaPods for handling third-party dependencies. To build the app, 
 
 ## User Features
 
-- [ ] View list of articles
+- [x] View list of articles
 - [ ] Pull-to-refresh any list in the app
 - [ ] Get alerts about network and server errors
 - [ ] Enjoy custom fonts and colors
@@ -30,8 +30,8 @@ The app uses CocoaPods for handling third-party dependencies. To build the app, 
 - [ ] Write tests for helpers and store
 - [x] Write models
 - [x] Write view models
-- [ ] Write tableviewcell
-- [ ] Write viewcontrollers
+- [x] Write tableviewcell
+- [x] Write viewcontrollers
 - [ ] Make backend in Swift and move to this repo.
 
 ## Useful resources
