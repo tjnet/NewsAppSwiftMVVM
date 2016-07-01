@@ -35,20 +35,16 @@ class ViewController: UIViewController {
         // (Can be any UIViewController subclass)
         // Make sure the title property of all view controllers is set
         // Example:
-        var controller1 : UIViewController = TableViewController(nibName: "TableViewController", bundle: nil)
-        controller1.title = "top"
+        var controller1 : UIViewController = TableViewController(nibName: "TableViewController", title: "top")
         controllerArray.append(controller1)
         
-        var controller2 : UIViewController = TableViewController(nibName: "TableViewController", bundle: nil)
-        controller2.title = "ruby"
+        var controller2 : UIViewController = TableViewController(nibName: "TableViewController", title: "ruby")
         controllerArray.append(controller2)
         
-        var controller3 : UIViewController = TableViewController(nibName: "TableViewController", bundle: nil)
-        controller3.title = "ios"
+        var controller3 : UIViewController = TableViewController(nibName: "TableViewController", title: "ios")
         controllerArray.append(controller3)
         
-        var controller4 : UIViewController = TableViewController(nibName: "TableViewController", bundle: nil)
-        controller4.title = "infrastructure"
+        var controller4 : UIViewController = TableViewController(nibName: "TableViewController", title: "infrastructure")
         controllerArray.append(controller4)
         
         // Customize page menu to your liking (optional) or use default settings by sending nil for 'options' in the init

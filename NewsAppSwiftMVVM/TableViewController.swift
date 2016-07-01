@@ -22,16 +22,22 @@ class TableViewController: UIViewController, UITableViewDelegate {
     private var entryList: [Entry]  = []
     
     // create ViewModel
-    let viewModel = EntriesViewModel("ios")
-
+    let viewModel = EntriesViewModel()
     
-//    var viewModel:EntryViewModel!;
+    init(nibName: String, title: String) {
+        super.init(nibName: nibName, bundle: nil)
+        self.title = title
+    }
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         
-        
         super.viewDidLoad()
         self.tableView.registerNib(UINib(nibName: "EntryTableViewCell", bundle: nil), forCellReuseIdentifier: "EntryTableViewCell")
+        
+        viewModel.reloadData(self.title!)
         
         // see http://yannickloriot.com/2016/01/make-uitableview-reactive-with-rxswift/
         // bind articles to UITableView
@@ -43,6 +49,9 @@ class TableViewController: UIViewController, UITableViewDelegate {
         viewModel.entries.driveNext { [unowned self] in
             self.entryList = $0
         }.addDisposableTo(bag)
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

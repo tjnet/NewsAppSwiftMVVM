@@ -6,7 +6,7 @@
 //  Copyright © 2016年 edu.self. All rights reserved.
 //
 
-import UIKit
+
 import RxSwift
 import RxCocoa
 
@@ -16,14 +16,19 @@ final class EntriesViewModel {
     
     //MARK: - Model
     
-    var entries: Driver<[Entry]>
+    var entries: Driver<[Entry]> = Driver.never()
     
     //MARK: - Set up
     
-    init(_ title: String) {
+    init() {
         //Initialise dependencies
-        entries = EntryAPIService().fetchEntries(q: title)
+
     }
+    
+    func reloadData(title: String) {
+        entries = EntryAPIService().fetchEntries(q: title)    
+    }
+    
 
     
 }
