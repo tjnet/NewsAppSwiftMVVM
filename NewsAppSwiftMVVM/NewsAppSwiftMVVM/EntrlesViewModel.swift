@@ -14,8 +14,6 @@ final class EntriesViewModel {
     
     //MARK: - Dependecies
     
-    private let disposeBag = DisposeBag()
-    
     //MARK: - Model
     
     var entries: Driver<[Entry]>
