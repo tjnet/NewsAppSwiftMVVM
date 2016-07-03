@@ -21,7 +21,7 @@ class EntryAPIService {
         let url = "https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=http://menthas.com/\(q)/rss"
         
         return JSON(.GET, url)
-            .asDriver(onErrorJustReturn: [])
+            .asDriver(onErrorJustReturn: []) //Builder just needs info about what to return in case of error.
             .map({ json -> [Entry] in
                 guard let responseData = json["responseData"] as? Dictionary<String, AnyObject> else {return []}
                 guard let feed = responseData["feed"] as? Dictionary<String, AnyObject> else {return []}

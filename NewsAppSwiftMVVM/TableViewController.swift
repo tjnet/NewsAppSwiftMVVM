@@ -41,7 +41,11 @@ class TableViewController: UIViewController, UITableViewDelegate {
         
         // see http://yannickloriot.com/2016/01/make-uitableview-reactive-with-rxswift/
         // bind articles to UITableView
-        viewModel.entries.asObservable().bindTo(self.tableView.rx_itemsWithCellIdentifier("EntryTableViewCell")) {
+        
+        // If there is a `drive` method available instead of `bindTo`,
+        // that means that the compiler has proven that all properties
+        // are satisfied.
+        viewModel.entries.drive(self.tableView.rx_itemsWithCellIdentifier("EntryTableViewCell")) {
             (index, entry: Entry, cell:EntryTableViewCell) in
             cell.updateCell(entry)
         }.addDisposableTo(bag)
@@ -49,8 +53,6 @@ class TableViewController: UIViewController, UITableViewDelegate {
         viewModel.entries.driveNext { [unowned self] in
             self.entryList = $0
         }.addDisposableTo(bag)
-        
-        
         
     }
 
