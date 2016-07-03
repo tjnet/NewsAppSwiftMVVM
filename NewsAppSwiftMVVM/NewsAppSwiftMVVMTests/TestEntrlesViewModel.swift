@@ -14,7 +14,7 @@ import RxCocoa
 
 class TestArticlesViewModel: XCTestCase {
     
-    let viewModel =  EntriesViewModel("ios")
+    let viewModel =  EntriesViewModel()
     var disposable =  DisposeBag()
 
     override func setUp() {
@@ -28,7 +28,7 @@ class TestArticlesViewModel: XCTestCase {
     }
     
     func testInit() {
-        let a = EntriesViewModel("ios")
+        let a = EntriesViewModel()
         XCTAssertNotNil(a)
     }
     
@@ -36,6 +36,7 @@ class TestArticlesViewModel: XCTestCase {
         
         let expectation = expectationWithDescription("subscribeNext Called")
         
+        viewModel.reloadData("ios")
         viewModel.entries.driveNext {(articles) in
             XCTAssertNotNil(articles)
             expectation.fulfill()
