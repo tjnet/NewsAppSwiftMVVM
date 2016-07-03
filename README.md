@@ -58,5 +58,6 @@ The app uses CocoaPods for handling third-party dependencies. To build the app, 
 ### sample for testing(XCTest)
 
 - [rickyngk/swift-mvvm: Swift MVVM sample](https://github.com/rickyngk/swift-mvvm)
+- [A practical MVVM example in Swift – Part 2 (featuring RxSwift) – Candy Code](http://candycode.io/a-practical-mvvm-example-in-swift-part-2/)
 
 
