@@ -18,7 +18,6 @@ class TableViewController: UIViewController, UITableViewDelegate {
     
     
     private let bag = DisposeBag()
-    private var tableData = BehaviorSubject<[Entry]>(value: [])
     private var entryList: [Entry]  = []
     
     // create ViewModel
