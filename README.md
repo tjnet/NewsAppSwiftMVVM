@@ -29,8 +29,10 @@ The app uses CocoaPods for handling third-party dependencies. To build the app, 
 
 - [ ] Move base URL to Settings for easy customization
 - [ ] Cancel network requests when the associated view becomes inactive
-- [x] Write tests for models
-- [x] Write tests for view models
+- [ ] Write tests for models
+- [ ] Write tests for view models
+- [x] Write tests for viewcontrollers
+- [ ] Write tests for custom cell
 - [ ] Write tests for helpers and store
 - [x] Write models
 - [x] Write view models
@@ -57,6 +59,7 @@ The app uses CocoaPods for handling third-party dependencies. To build the app, 
 
 ### sample for testing(XCTest)
 
+- [Unit Testing in Swift: Dependency Injection](https://www.natashatherobot.com/unit-testing-swift-dependency-injection/)
 - [rickyngk/swift-mvvm: Swift MVVM sample](https://github.com/rickyngk/swift-mvvm)
 - [A practical MVVM example in Swift – Part 2 (featuring RxSwift) – Candy Code](http://candycode.io/a-practical-mvvm-example-in-swift-part-2/)
 

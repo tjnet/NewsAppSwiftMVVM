@@ -9,7 +9,7 @@
 import XCTest
 @testable import NewsAppSwiftMVVM
 
-class TableViewControllerTests: XCTestCase {
+class EntryTableViewCellTests: XCTestCase {
     
 
     var tableViewController:TableViewController?

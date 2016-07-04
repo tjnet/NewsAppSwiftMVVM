@@ -20,6 +20,7 @@
 		68C5442F1CE3617C0040AC49 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C5442D1CE3617C0040AC49 /* TableViewController.swift */; };
 		68C544301CE3617C0040AC49 /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68C5442E1CE3617C0040AC49 /* TableViewController.xib */; };
 		68C544371CE36A9C0040AC49 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C544361CE36A9C0040AC49 /* Entry.swift */; };
+		68C68C741D2A9769007459A5 /* TableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C68C731D2A9769007459A5 /* TableViewControllerTests.swift */; };
 		68D13A741D22A170003B0690 /* EntrlesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D13A731D22A170003B0690 /* EntrlesViewModel.swift */; };
 		68D13A781D22AF3C003B0690 /* TestEntrlesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D13A771D22AF3C003B0690 /* TestEntrlesViewModel.swift */; };
 		68D13A7A1D22C4B2003B0690 /* EntryTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D13A791D22C4B2003B0690 /* EntryTableViewCellViewModel.swift */; };
@@ -65,6 +66,7 @@
 		68C5442D1CE3617C0040AC49 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = ../TableViewController.swift; sourceTree = "<group>"; };
 		68C5442E1CE3617C0040AC49 /* TableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TableViewController.xib; path = ../TableViewController.xib; sourceTree = "<group>"; };
 		68C544361CE36A9C0040AC49 /* Entry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		68C68C731D2A9769007459A5 /* TableViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewControllerTests.swift; sourceTree = "<group>"; };
 		68D13A731D22A170003B0690 /* EntrlesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntrlesViewModel.swift; sourceTree = "<group>"; };
 		68D13A771D22AF3C003B0690 /* TestEntrlesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestEntrlesViewModel.swift; sourceTree = "<group>"; };
 		68D13A791D22C4B2003B0690 /* EntryTableViewCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryTableViewCellViewModel.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				68A3174D1D0AEF9900750C66 /* EntryTableViewCellTests.swift */,
+				68C68C731D2A9769007459A5 /* TableViewControllerTests.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -540,6 +543,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				680922271D03F597008E1FFD /* TestEntryTableViewCellViewModel.swift in Sources */,
+				68C68C741D2A9769007459A5 /* TableViewControllerTests.swift in Sources */,
 				68A3174F1D0AEF9900750C66 /* EntryTableViewCellTests.swift in Sources */,
 				685B169D1CF5EB5E0065A66C /* TestEntry.swift in Sources */,
 				68FBF7AD1CE2302A00A3D7C9 /* NewsAppSwiftMVVMTests.swift in Sources */,

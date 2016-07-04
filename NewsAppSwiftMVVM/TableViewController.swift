@@ -18,7 +18,7 @@ class TableViewController: UIViewController, UITableViewDelegate {
     
     
     private let bag = DisposeBag()
-    private var entryList: [Entry]  = []
+    var entryList: [Entry]  = []
     
     // create ViewModel
     let viewModel = EntriesViewModel()
