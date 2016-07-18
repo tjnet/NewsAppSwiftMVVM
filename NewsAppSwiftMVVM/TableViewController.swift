@@ -21,7 +21,7 @@ class TableViewController: UIViewController, UITableViewDelegate {
     var entryList: [Entry]  = []
     
     // create ViewModel
-    let viewModel = EntriesViewModel().injectService(EntryAPIService(entryStore: EntryStoreImpl()))
+    let viewModel = EntriesViewModel(service: EntryAPIService(entryStore: EntryStoreImpl()))
     
     init(nibName: String, title: String) {
         super.init(nibName: nibName, bundle: nil)

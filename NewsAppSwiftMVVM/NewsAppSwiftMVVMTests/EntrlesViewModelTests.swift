@@ -14,7 +14,7 @@ import RxCocoa
 
 class EntriesViewModelTests: XCTestCase {
     
-    let viewModel =  EntriesViewModel().injectService(EntryAPIService(entryStore: EntryStoreMock()))
+    let viewModel =  EntriesViewModel(service: EntryAPIService(entryStore: EntryStoreMock()))
     var disposable =  DisposeBag()
 
     override func setUp() {
@@ -28,18 +28,23 @@ class EntriesViewModelTests: XCTestCase {
     }
     
     func testInit() {
-        let a = EntriesViewModel()
-        XCTAssertNotNil(a)
+        XCTAssertNotNil(viewModel)
     }
     
     func testArticles() {
         
         let expectation = expectationWithDescription("subscribeNext Called")
         
+        let expectedArticle = Entry()
+        expectedArticle.setValuesForKeysWithDictionary(
+            ["title": "title1", "link": "https://example.com/articles/1", "contentSnippet": "今日はとてもいい天気..."]
+        )
+        
         viewModel.reloadData("ios")
         viewModel.entries.driveNext {(articles) in
             XCTAssertNotNil(articles)
             XCTAssertEqual(articles.count, 1)
+            XCTAssertEqual(articles.first, expectedArticle)
             expectation.fulfill()
         }.addDisposableTo(disposable)
         

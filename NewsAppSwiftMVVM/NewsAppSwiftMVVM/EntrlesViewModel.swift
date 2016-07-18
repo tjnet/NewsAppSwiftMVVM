@@ -18,23 +18,19 @@ final class EntriesViewModel {
     
     var entries: Driver<[Entry]> = Driver.never()
     
-    internal var service: EntryAPIService?
+    let service: EntryAPIService
     
     //MARK: - Set up
     
-    init() {
+    init(service: EntryAPIService) {
         //Initialise dependencies
-
+        self.service = service
     }
     
     func reloadData(title: String) {
-        entries = self.service!.fetchEntries(q: title)
+        entries = self.service.fetchEntries(q: title)
     }
     
-    func injectService(service: EntryAPIService) -> EntriesViewModel {
-        self.service = service
-        return self
-    }
     
     
 

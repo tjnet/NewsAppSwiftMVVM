@@ -34,9 +34,16 @@ class TestArticleAPIService: XCTestCase {
     func testFetchEntries() {
         let expectation = expectationWithDescription("subscribeNext called")
         let e = EntryAPIService(entryStore: EntryStoreMock())
+        
+        let expectedArticle = Entry()
+        expectedArticle.setValuesForKeysWithDictionary(
+            ["title": "title1", "link": "https://example.com/articles/1", "contentSnippet": "今日はとてもいい天気..."]
+        )
+        
         e.fetchEntries(q: "ios").driveNext({ (articles) in
             XCTAssertNotNil(articles)
             XCTAssertFalse(articles.isEmpty)
+            XCTAssertEqual(articles.first, expectedArticle)
             expectation.fulfill()
         }).addDisposableTo(bag)
         
