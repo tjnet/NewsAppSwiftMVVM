@@ -31,7 +31,7 @@ The app uses CocoaPods for handling third-party dependencies. To build the app, 
 - [ ] Cancel network requests when the associated view becomes inactive
 - [x] Write tests for models
 - [x] Write tests for services
-- [ ] Write tests for viewmodels
+- [x] Write tests for viewmodels
 - [x] Write tests for viewcontrollers
 - [ ] Write tests for custom cell
 - [ ] Write tests for helpers and store

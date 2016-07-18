@@ -12,9 +12,9 @@ import RxCocoa
 
 @testable import NewsAppSwiftMVVM
 
-class TestArticlesViewModel: XCTestCase {
+class EntriesViewModelTests: XCTestCase {
     
-    let viewModel =  EntriesViewModel()
+    let viewModel =  EntriesViewModel().injectService(EntryAPIService(entryStore: EntryStoreMock()))
     var disposable =  DisposeBag()
 
     override func setUp() {
@@ -39,6 +39,7 @@ class TestArticlesViewModel: XCTestCase {
         viewModel.reloadData("ios")
         viewModel.entries.driveNext {(articles) in
             XCTAssertNotNil(articles)
+            XCTAssertEqual(articles.count, 1)
             expectation.fulfill()
         }.addDisposableTo(disposable)
         

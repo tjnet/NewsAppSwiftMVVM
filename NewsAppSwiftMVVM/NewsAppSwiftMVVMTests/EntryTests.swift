@@ -11,7 +11,7 @@ import XCTest
 
 @testable import NewsAppSwiftMVVM
 
-class TestEntry: XCTestCase {
+class EntryTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

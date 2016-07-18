@@ -13,7 +13,7 @@ import RxSwift
 import RxCocoa
 @testable import NewsAppSwiftMVVM
 
-class TestEntryTableViewCellViewModel: XCTestCase {
+class EntryTableViewCellViewModelTests: XCTestCase {
 
     let bag = DisposeBag()
     
