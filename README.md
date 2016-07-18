@@ -29,7 +29,7 @@ The app uses CocoaPods for handling third-party dependencies. To build the app, 
 
 - [ ] Move base URL to Settings for easy customization
 - [ ] Cancel network requests when the associated view becomes inactive
-- [ ] Write tests for models
+- [x] Write tests for models
 - [x] Write tests for services
 - [ ] Write tests for viewmodels
 - [x] Write tests for viewcontrollers
