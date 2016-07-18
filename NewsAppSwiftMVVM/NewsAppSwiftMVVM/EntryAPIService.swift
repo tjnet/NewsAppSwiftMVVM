@@ -17,18 +17,13 @@ class EntryAPIService {
         case CannotParse
     }
     
-    func fetchEntries(q q: String) -> Driver<[Entry]> {
-        let url = "https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=http://menthas.com/\(q)/rss"
-        
-        return JSON(.GET, url)
-            .asDriver(onErrorJustReturn: []) //Builder just needs info about what to return in case of error.
-            .map({ json -> [Entry] in
-                guard let responseData = json["responseData"] as? Dictionary<String, AnyObject> else {return []}
-                guard let feed = responseData["feed"] as? Dictionary<String, AnyObject> else {return []}
-                guard let entries = feed["entries"] as? [AnyObject] else {return []}
-                
-                return entries.map { Entry(value: $0) }
-                
-            })
+    let entryStore: EntryStore
+    
+    init(entryStore: EntryStore) {
+        self.entryStore = entryStore
     }
+    func fetchEntries(q q: String) -> Driver<[Entry]> {
+        return entryStore.fetchEntries(q: q)
+    }
+    
 }

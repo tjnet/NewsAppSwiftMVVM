@@ -27,14 +27,14 @@ class TestArticleAPIService: XCTestCase {
     }
     
     func testInit() {
-        let a = EntryAPIService()
-        XCTAssertNotNil(a)
+        let e = EntryAPIService(entryStore: EntryStoreMock())
+        XCTAssertNotNil(e)
     }
     
     func testFetchEntries() {
         let expectation = expectationWithDescription("subscribeNext called")
-        let a = EntryAPIService()
-        a.fetchEntries(q: "ios").driveNext({ (articles) in
+        let e = EntryAPIService(entryStore: EntryStoreMock())
+        e.fetchEntries(q: "ios").driveNext({ (articles) in
             XCTAssertNotNil(articles)
             XCTAssertFalse(articles.isEmpty)
             expectation.fulfill()
@@ -43,7 +43,7 @@ class TestArticleAPIService: XCTestCase {
         waitForExpectationsWithTimeout(5, handler: { error in
             if let error = error {
                 XCTFail("waitForExpectationsWithTimeout errored: \(error)")
-            }
+            } 
         })
     }
     

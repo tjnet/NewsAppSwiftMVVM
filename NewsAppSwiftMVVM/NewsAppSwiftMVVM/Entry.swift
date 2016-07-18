@@ -15,3 +15,9 @@ class Entry: Object {
     dynamic var link: String = ""
     dynamic var contentSnippet: String = ""
 }
+
+extension Entry: Equatable { }
+
+func == (lhs: Entry, rhs: Entry) -> Bool {
+    return lhs.title == rhs.title && lhs.link == rhs.link && lhs.contentSnippet == rhs.contentSnippet
+}

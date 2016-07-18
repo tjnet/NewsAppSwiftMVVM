@@ -26,7 +26,7 @@ final class EntriesViewModel {
     }
     
     func reloadData(title: String) {
-        entries = EntryAPIService().fetchEntries(q: title)
+        entries = EntryAPIService(entryStore: EntryStoreImpl()).fetchEntries(q: title)
     }
     
 
