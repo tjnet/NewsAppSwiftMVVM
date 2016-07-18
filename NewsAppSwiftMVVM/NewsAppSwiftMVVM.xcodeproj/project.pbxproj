@@ -14,6 +14,7 @@
 		6813800D1D3CAF3F00018040 /* EntryStoreImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6813800C1D3CAF3F00018040 /* EntryStoreImpl.swift */; };
 		6813800F1D3CC27200018040 /* EntryStoreMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6813800E1D3CC27200018040 /* EntryStoreMock.swift */; };
 		681380131D3CD0D400018040 /* EntryStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681380121D3CD0D400018040 /* EntryStoreTests.swift */; };
+		681380151D3D250B00018040 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681380141D3D250B00018040 /* SettingsViewController.swift */; };
 		684CF4561D1C274C00CAB7B2 /* EntryAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684CF4551D1C274C00CAB7B2 /* EntryAPIService.swift */; };
 		685B169D1CF5EB5E0065A66C /* EntryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685B169C1CF5EB5E0065A66C /* EntryTests.swift */; };
 		685B169F1CF5EE6B0065A66C /* EntryAPIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685B169E1CF5EE6B0065A66C /* EntryAPIServiceTests.swift */; };
@@ -64,6 +65,7 @@
 		6813800C1D3CAF3F00018040 /* EntryStoreImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryStoreImpl.swift; sourceTree = "<group>"; };
 		6813800E1D3CC27200018040 /* EntryStoreMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryStoreMock.swift; sourceTree = "<group>"; };
 		681380121D3CD0D400018040 /* EntryStoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryStoreTests.swift; sourceTree = "<group>"; };
+		681380141D3D250B00018040 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		684CF4551D1C274C00CAB7B2 /* EntryAPIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryAPIService.swift; sourceTree = "<group>"; };
 		685B169C1CF5EB5E0065A66C /* EntryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryTests.swift; sourceTree = "<group>"; };
 		685B169E1CF5EE6B0065A66C /* EntryAPIServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryAPIServiceTests.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				68C5442E1CE3617C0040AC49 /* TableViewController.xib */,
 				68A317491D0AEC5100750C66 /* EntryTableViewCell.swift */,
 				68FA0DB61D0D0B470035972E /* EntryTableViewCell.xib */,
+				681380141D3D250B00018040 /* SettingsViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -564,6 +567,7 @@
 				6813800B1D3CAE6C00018040 /* EntryStore.swift in Sources */,
 				6813800D1D3CAF3F00018040 /* EntryStoreImpl.swift in Sources */,
 				68A3174A1D0AEC5100750C66 /* EntryTableViewCell.swift in Sources */,
+				681380151D3D250B00018040 /* SettingsViewController.swift in Sources */,
 				68C5442C1CE360770040AC49 /* CAPSPageMenu.swift in Sources */,
 				68C5442F1CE3617C0040AC49 /* TableViewController.swift in Sources */,
 			);
