@@ -12,7 +12,7 @@ import RxCocoa
 
 @testable import NewsAppSwiftMVVM
 
-class TestArticleAPIService: XCTestCase {
+class TestEntryAPIService: XCTestCase {
     
     private let bag = DisposeBag()
     
