@@ -103,6 +103,7 @@
                     <connections>
                         <outlet property="headerMenuHeightConstraint" destination="5Id-Cy-Qk8" id="oN6-gX-Mbd"/>
                         <outlet property="headerMenuTitleLabel" destination="NPz-C8-G9L" id="hTe-zs-Pbc"/>
+                        <outlet property="toggleHeaderMenuButton" destination="ieF-hi-RzX" id="YuP-HH-cz4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qOi-Yr-VQl" userLabel="First Responder" sceneMemberID="firstResponder"/>

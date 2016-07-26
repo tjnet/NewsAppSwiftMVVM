@@ -14,6 +14,7 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var headerMenuHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var headerMenuTitleLabel: UILabel!
+    @IBOutlet weak var toggleHeaderMenuButton: UIButton!
     
     @IBAction func toggleHeaderMenu(sender: AnyObject) {
         isHeaderMenuOpen = !isHeaderMenuOpen
@@ -22,7 +23,13 @@ class SettingsViewController: UIViewController {
         headerMenuTitleLabel.text = isHeaderMenuOpen ? "Add Channel" : "Channel List"
         
         UIView.animateWithDuration(0.43, delay: 0, options: [.CurveEaseOut], animations: {
+            
             self.view.layoutIfNeeded()
+            
+            let angle = self.isHeaderMenuOpen ? CGFloat(M_PI_4) : 0
+            
+            self.toggleHeaderMenuButton.transform = CGAffineTransformMakeRotation(angle)
+            
             }, completion: nil )
     }
     
