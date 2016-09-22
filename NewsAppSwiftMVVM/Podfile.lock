@@ -1,5 +1,20 @@
 PODS:
   - Alamofire (3.4.0)
+  - FontAwesomeKit (2.2.0):
+    - FontAwesomeKit/Core (= 2.2.0)
+    - FontAwesomeKit/FontAwesome (= 2.2.0)
+    - FontAwesomeKit/FoundationIcons (= 2.2.0)
+    - FontAwesomeKit/IonIcons (= 2.2.0)
+    - FontAwesomeKit/Zocial (= 2.2.0)
+  - FontAwesomeKit/Core (2.2.0)
+  - FontAwesomeKit/FontAwesome (2.2.0):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/FoundationIcons (2.2.0):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/IonIcons (2.2.0):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/Zocial (2.2.0):
+    - FontAwesomeKit/Core
   - Realm (1.0.0):
     - Realm/Headers (= 1.0.0)
   - Realm/Headers (1.0.0)
@@ -23,6 +38,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - FontAwesomeKit (~> 2.2.0)
   - RealmSwift
   - RxAlamofire
   - RxBlocking (~> 2.0)
@@ -33,6 +49,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
+  FontAwesomeKit: 025fd4dd1017fe4e3f8d47b03e024deedbb33cd4
   Realm: e15cd8e7c11d3e576f628ba0b7cb855269b4991c
   RealmSwift: 3229306d020d96f83b335f87a0dcbf2cef0e6a2b
   RxAlamofire: b72b5ca3e46b0d0cae0a19f8287b5f07a99866a7
@@ -42,6 +59,6 @@ SPEC CHECKSUMS:
   RxTests: 1b13bea0a138552b52aeead549ef08d578bcda9e
   SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
 
-PODFILE CHECKSUM: 82df532712cbc743fccd08171aa5961e2e2005c8
+PODFILE CHECKSUM: 8d628c9638574dfa38f3c697786d94410e4a43b1
 
-COCOAPODS: 1.0.0
+COCOAPODS: 1.0.1

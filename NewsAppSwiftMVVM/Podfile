@@ -14,6 +14,8 @@ target 'NewsAppSwiftMVVM' do
   pod 'Alamofire'
   pod 'RxAlamofire'
   pod 'SDWebImage',    '~> 3.7'
+  # icon font library
+  pod 'FontAwesomeKit', '~> 2.2.0'
 end
 
 target 'NewsAppSwiftMVVMTests' do
@@ -25,6 +27,8 @@ target 'NewsAppSwiftMVVMTests' do
   #Alamofire
   pod 'Alamofire'
   pod 'RxAlamofire'
+  # icon font library
+  pod 'FontAwesomeKit', '~> 2.2.0'
   # Pods for testing  
   pod 'RxBlocking', '~> 2.0'
   pod 'RxTests',    '~> 2.0'
