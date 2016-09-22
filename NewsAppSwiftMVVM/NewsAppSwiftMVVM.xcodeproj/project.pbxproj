@@ -299,12 +299,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 68FBF7BC1CE2302A00A3D7C9 /* Build configuration list for PBXNativeTarget "NewsAppSwiftMVVM" */;
 			buildPhases = (
-				6BBEB07F45B3F91519D04898 /* 📦 Check Pods Manifest.lock */,
+				6BBEB07F45B3F91519D04898 /* [CP] Check Pods Manifest.lock */,
 				68FBF7901CE2302900A3D7C9 /* Sources */,
 				68FBF7911CE2302900A3D7C9 /* Frameworks */,
 				68FBF7921CE2302900A3D7C9 /* Resources */,
-				FFB7F8F6211E38EDBE03DB2D /* 📦 Embed Pods Frameworks */,
-				EF44529E413572916709CD46 /* 📦 Copy Pods Resources */,
+				FFB7F8F6211E38EDBE03DB2D /* [CP] Embed Pods Frameworks */,
+				EF44529E413572916709CD46 /* [CP] Copy Pods Resources */,
 				68691B9E1D93C10800843AC9 /* ShellScript */,
 			);
 			buildRules = (
@@ -320,12 +320,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 68FBF7BF1CE2302A00A3D7C9 /* Build configuration list for PBXNativeTarget "NewsAppSwiftMVVMTests" */;
 			buildPhases = (
-				47172CE577AEAF5EC3262865 /* 📦 Check Pods Manifest.lock */,
+				47172CE577AEAF5EC3262865 /* [CP] Check Pods Manifest.lock */,
 				68FBF7A41CE2302A00A3D7C9 /* Sources */,
 				68FBF7A51CE2302A00A3D7C9 /* Frameworks */,
 				68FBF7A61CE2302A00A3D7C9 /* Resources */,
-				D032E8DAF33F580159A11F12 /* 📦 Embed Pods Frameworks */,
-				1D94EC0496E821BA2A91E945 /* 📦 Copy Pods Resources */,
+				D032E8DAF33F580159A11F12 /* [CP] Embed Pods Frameworks */,
+				1D94EC0496E821BA2A91E945 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -341,11 +341,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 68FBF7C21CE2302A00A3D7C9 /* Build configuration list for PBXNativeTarget "NewsAppSwiftMVVMUITests" */;
 			buildPhases = (
-				131D9EAE316C2C4A84524D15 /* 📦 Check Pods Manifest.lock */,
+				131D9EAE316C2C4A84524D15 /* [CP] Check Pods Manifest.lock */,
 				68FBF7AF1CE2302A00A3D7C9 /* Sources */,
 				68FBF7B01CE2302A00A3D7C9 /* Frameworks */,
 				68FBF7B11CE2302A00A3D7C9 /* Resources */,
-				EFA14349D1EBC2067F8A97B7 /* 📦 Copy Pods Resources */,
+				EFA14349D1EBC2067F8A97B7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -432,14 +432,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		131D9EAE316C2C4A84524D15 /* 📦 Check Pods Manifest.lock */ = {
+		131D9EAE316C2C4A84524D15 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,14 +447,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		1D94EC0496E821BA2A91E945 /* 📦 Copy Pods Resources */ = {
+		1D94EC0496E821BA2A91E945 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,14 +462,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NewsAppSwiftMVVMTests/Pods-NewsAppSwiftMVVMTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		47172CE577AEAF5EC3262865 /* 📦 Check Pods Manifest.lock */ = {
+		47172CE577AEAF5EC3262865 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -490,14 +490,14 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
-		6BBEB07F45B3F91519D04898 /* 📦 Check Pods Manifest.lock */ = {
+		6BBEB07F45B3F91519D04898 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,14 +505,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		D032E8DAF33F580159A11F12 /* 📦 Embed Pods Frameworks */ = {
+		D032E8DAF33F580159A11F12 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,14 +520,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NewsAppSwiftMVVMTests/Pods-NewsAppSwiftMVVMTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EF44529E413572916709CD46 /* 📦 Copy Pods Resources */ = {
+		EF44529E413572916709CD46 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -535,14 +535,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NewsAppSwiftMVVM/Pods-NewsAppSwiftMVVM-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EFA14349D1EBC2067F8A97B7 /* 📦 Copy Pods Resources */ = {
+		EFA14349D1EBC2067F8A97B7 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -550,14 +550,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NewsAppSwiftMVVMUITests/Pods-NewsAppSwiftMVVMUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FFB7F8F6211E38EDBE03DB2D /* 📦 Embed Pods Frameworks */ = {
+		FFB7F8F6211E38EDBE03DB2D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
