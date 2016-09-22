@@ -40,7 +40,7 @@ class EntryAPIServiceTests: XCTestCase {
             ["title": "title1", "link": "https://example.com/articles/1", "contentSnippet": "今日はとてもいい天気..."]
         )
         
-        e.fetchEntries(q: "ios").driveNext({ (articles) in
+        e.fetchEntries(query: "ios").driveNext({ (articles) in
             XCTAssertNotNil(articles)
             XCTAssertFalse(articles.isEmpty)
             XCTAssertEqual(articles.first, expectedArticle)

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Entry View Controller-->
+        <scene sceneID="j74-qG-tyL">
+            <objects>
+                <viewController storyboardIdentifier="EntryViewController" id="8JH-UB-VrE" customClass="EntryViewController" customModule="NewsAppSwiftMVVM" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="t4N-8Y-89V"/>
+                        <viewControllerLayoutGuide type="bottom" id="ule-RL-V8k"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GUb-wz-s4a">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tUZ-Pn-V01">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="tUZ-Pn-V01" secondAttribute="trailing" id="OcC-G9-TPA"/>
+                            <constraint firstItem="tUZ-Pn-V01" firstAttribute="leading" secondItem="GUb-wz-s4a" secondAttribute="leading" id="f0X-ac-7h1"/>
+                            <constraint firstItem="tUZ-Pn-V01" firstAttribute="top" secondItem="t4N-8Y-89V" secondAttribute="bottom" id="mJ6-Ar-yD8"/>
+                            <constraint firstItem="ule-RL-V8k" firstAttribute="top" secondItem="tUZ-Pn-V01" secondAttribute="bottom" id="poR-mO-RTW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentWeb" destination="tUZ-Pn-V01" id="kJD-Fs-g1Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nBi-Tz-WVk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="831" y="13"/>
+        </scene>
+    </scenes>
+</document>

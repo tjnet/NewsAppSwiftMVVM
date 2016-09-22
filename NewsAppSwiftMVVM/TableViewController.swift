@@ -76,8 +76,10 @@ class TableViewController: UIViewController, UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         let entry = self.entryList[indexPath.row]
-        let svc = SFSafariViewController(URL: NSURL(string: entry.link)!)
-        self.presentViewController(svc, animated: true, completion: nil)
+        let storyboard = UIStoryboard(name: "EntryViewController", bundle: nil)
+        let entryVC : EntryViewController = storyboard.instantiateViewControllerWithIdentifier("EntryViewController") as! EntryViewController
+        entryVC.url = NSURL(string: entry.link)!
+        self.navigationController?.pushViewController(entryVC, animated: true)
         
         reloadRowsAtIndexPath(indexPath)
     }

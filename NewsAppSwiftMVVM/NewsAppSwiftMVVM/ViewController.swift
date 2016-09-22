@@ -22,8 +22,10 @@ class ViewController: UIViewController {
         self.navigationController?.navigationBar.barTintColor = UIColor.whiteColor()
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
-        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.grayColor()]
+        self.navigationController?.navigationBar.tintColor = UIColor.grayColor()
+        
+        let backItem = UIBarButtonItem(title: "", style: .Bordered, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem = backItem
         
         // Do any additional setup after loading the view, typically from a nib.
         
@@ -68,6 +70,9 @@ class ViewController: UIViewController {
         self.view.addSubview(pageMenu!.view)
         
         pageMenu!.didMoveToParentViewController(self)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
     }
 
     override func didReceiveMemoryWarning() {
