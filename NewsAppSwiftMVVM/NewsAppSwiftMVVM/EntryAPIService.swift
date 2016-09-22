@@ -22,8 +22,8 @@ class EntryAPIService {
     init(entryStore: EntryStore) {
         self.entryStore = entryStore
     }
-    func fetchEntries(q q: String) -> Driver<[Entry]> {
-        return entryStore.fetchEntries(q: q)
+    func fetchEntries(query query: String) -> Driver<[Entry]> {
+        return entryStore.fetchEntries(query: query)
     }
     
 }

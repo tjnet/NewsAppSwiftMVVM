@@ -1,0 +1,10 @@
+disabled_rules:
+  - todo
+  - force_cast
+  - line_length
+  - variable_name
+  - type_body_length
+  - file_length
+  - cyclomatic_complexity
+  - function_parameter_count
+  - type_name

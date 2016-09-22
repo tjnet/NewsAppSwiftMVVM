@@ -9,5 +9,5 @@
 import RxCocoa
 
 protocol EntryStore {
-    func fetchEntries(q q: String) -> Driver<[Entry]>
+    func fetchEntries(query query: String) -> Driver<[Entry]>
 }

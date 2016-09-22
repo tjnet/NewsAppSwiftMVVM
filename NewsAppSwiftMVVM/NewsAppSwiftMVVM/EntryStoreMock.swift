@@ -11,7 +11,7 @@ import RxAlamofire
 
 
 class EntryStoreMock: EntryStore {
-    func fetchEntries(q q: String) -> Driver<[Entry]> {
+    func fetchEntries(query query: String) -> Driver<[Entry]> {
         
         let entry = Entry()
         entry.title = "title1"

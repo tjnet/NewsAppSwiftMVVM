@@ -28,7 +28,7 @@ final class EntriesViewModel {
     }
     
     func reloadData(title: String) {
-        entries = self.service.fetchEntries(q: title)
+        entries = self.service.fetchEntries(query: title)
     }
     
     
