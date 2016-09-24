@@ -7,8 +7,19 @@
 //
 
 import UIKit
+import FontAwesomeKit
 
 class SearchViewController: UIViewController {
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        // Initialize Tab Bar Item
+        let searchIcon: FAKFontAwesome = FAKFontAwesome.searchIconWithSize(20)
+        let image = self.imageFromAFont(searchIcon)
+        tabBarItem = UITabBarItem(title: "search", image: image, tag: 1)
+    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()

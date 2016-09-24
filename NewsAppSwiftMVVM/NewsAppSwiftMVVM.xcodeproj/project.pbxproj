@@ -17,6 +17,8 @@
 		68084E011D963F23002A491E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68084E001D963F23002A491E /* SettingsViewController.swift */; };
 		680853781D965917002A491E /* dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 680853771D965917002A491E /* dummy.m */; };
 		680853791D965917002A491E /* dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 680853771D965917002A491E /* dummy.m */; };
+		6808537B1D965A21002A491E /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6808537A1D965A21002A491E /* FontAwesome.otf */; };
+		6808537D1D965D05002A491E /* UIViewController+style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6808537C1D965D05002A491E /* UIViewController+style.swift */; };
 		680922271D03F597008E1FFD /* EntryTableViewCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680922261D03F597008E1FFD /* EntryTableViewCellViewModelTests.swift */; };
 		6813800B1D3CAE6C00018040 /* EntryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6813800A1D3CAE6C00018040 /* EntryStore.swift */; };
 		6813800D1D3CAF3F00018040 /* EntryStoreImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6813800C1D3CAF3F00018040 /* EntryStoreImpl.swift */; };
@@ -79,6 +81,8 @@
 		680853751D965917002A491E /* NewsAppSwiftMVVM-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NewsAppSwiftMVVM-Bridging-Header.h"; sourceTree = "<group>"; };
 		680853761D965917002A491E /* NewsAppSwiftMVVMTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NewsAppSwiftMVVMTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		680853771D965917002A491E /* dummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dummy.m; sourceTree = "<group>"; };
+		6808537A1D965A21002A491E /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.otf; path = Pods/FontAwesomeKit/FontAwesomeKit/FontAwesome.otf; sourceTree = "<group>"; };
+		6808537C1D965D05002A491E /* UIViewController+style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+style.swift"; sourceTree = "<group>"; };
 		680922261D03F597008E1FFD /* EntryTableViewCellViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryTableViewCellViewModelTests.swift; sourceTree = "<group>"; };
 		6813800A1D3CAE6C00018040 /* EntryStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryStore.swift; sourceTree = "<group>"; };
 		6813800C1D3CAF3F00018040 /* EntryStoreImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryStoreImpl.swift; sourceTree = "<group>"; };
@@ -208,6 +212,7 @@
 				68084DF41D963BDE002A491E /* SearchViewController.storyboard */,
 				68084DFC1D963F02002A491E /* SearchViewController.swift */,
 				68691BA11D93FDF600843AC9 /* EntriesTableViewController.storyboard */,
+				6808537C1D965D05002A491E /* UIViewController+style.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -253,6 +258,7 @@
 		68FBF78B1CE2302900A3D7C9 = {
 			isa = PBXGroup;
 			children = (
+				6808537A1D965A21002A491E /* FontAwesome.otf */,
 				68FBF7961CE2302900A3D7C9 /* NewsAppSwiftMVVM */,
 				68FBF7AB1CE2302A00A3D7C9 /* NewsAppSwiftMVVMTests */,
 				68FBF7B61CE2302A00A3D7C9 /* NewsAppSwiftMVVMUITests */,
@@ -437,6 +443,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6808537B1D965A21002A491E /* FontAwesome.otf in Resources */,
 				68691BA31D93FDF600843AC9 /* EntriesTableViewController.storyboard in Resources */,
 				68FBF7A21CE2302900A3D7C9 /* LaunchScreen.storyboard in Resources */,
 				68084DFB1D963C8E002A491E /* SettingsViewController.storyboard in Resources */,
@@ -614,6 +621,7 @@
 				68FBF79A1CE2302900A3D7C9 /* ViewController.swift in Sources */,
 				68D13A7A1D22C4B2003B0690 /* EntryTableViewCellViewModel.swift in Sources */,
 				6813800F1D3CC27200018040 /* EntryStoreMock.swift in Sources */,
+				6808537D1D965D05002A491E /* UIViewController+style.swift in Sources */,
 				684CF4561D1C274C00CAB7B2 /* EntryAPIService.swift in Sources */,
 				68084E011D963F23002A491E /* SettingsViewController.swift in Sources */,
 				68FBF7981CE2302900A3D7C9 /* AppDelegate.swift in Sources */,

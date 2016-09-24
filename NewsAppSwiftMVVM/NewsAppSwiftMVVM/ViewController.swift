@@ -7,10 +7,22 @@
 //
 
 import UIKit
+import FontAwesomeKit
 
 class ViewController: UIViewController {
     
     var pageMenu : CAPSPageMenu?
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        // Initialize Tab Bar Item
+        let newsIcon: FAKFontAwesome = FAKFontAwesome.newspaperOIconWithSize(20)
+        let image = self.imageFromAFont(newsIcon)
+        tabBarItem = UITabBarItem(title: "news", image: image, tag: 1)
+        
+    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()

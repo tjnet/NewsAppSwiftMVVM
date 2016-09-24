@@ -7,9 +7,19 @@
 //
 
 import UIKit
+import FontAwesomeKit
 
 class WeatherViewController: UIViewController {
 
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        // Initialize Tab Bar Item
+        let weatherIcon: FAKFontAwesome = FAKFontAwesome.cloudIconWithSize(20)
+        let image = self.imageFromAFont(weatherIcon)
+        tabBarItem = UITabBarItem(title: "weather", image: image, tag: 4)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

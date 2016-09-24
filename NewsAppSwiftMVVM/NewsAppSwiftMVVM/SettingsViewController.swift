@@ -7,11 +7,27 @@
 //
 
 import UIKit
+import FontAwesomeKit
+
 
 class SettingsViewController: UIViewController {
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        // Initialize Tab Bar Item
+        let userIcon: FAKFontAwesome = FAKFontAwesome.userIconWithSize(20)
+        let image = self.imageFromAFont(userIcon)
+        tabBarItem = UITabBarItem(title: "settings", image: image, tag: 1)
+        
+        // Configure Tab Bar Item
+        tabBarItem.badgeValue = "8"
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // set left navBarIcon to open left menu
+        let cogIcon : FAKFontAwesome = FAKFontAwesome.naviconIconWithSize(20)
 
         // Do any additional setup after loading the view.
     }
