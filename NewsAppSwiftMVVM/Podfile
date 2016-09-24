@@ -5,6 +5,7 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'NewsAppSwiftMVVM' do
+  pod 'FontAwesomeKit', '~> 2.2.0'
   #Rx
   pod 'RxSwift',    '~> 2.0'
   pod 'RxCocoa',    '~> 2.0'
@@ -17,6 +18,7 @@ target 'NewsAppSwiftMVVM' do
 end
 
 target 'NewsAppSwiftMVVMTests' do
+  pod 'FontAwesomeKit', '~> 2.2.0'
   #Rx
   pod 'RxSwift',    '~> 2.0'
   pod 'RxCocoa',    '~> 2.0'

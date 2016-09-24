@@ -15,6 +15,8 @@
 		68084DFD1D963F02002A491E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68084DFC1D963F02002A491E /* SearchViewController.swift */; };
 		68084DFF1D963F13002A491E /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68084DFE1D963F13002A491E /* WeatherViewController.swift */; };
 		68084E011D963F23002A491E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68084E001D963F23002A491E /* SettingsViewController.swift */; };
+		680853781D965917002A491E /* dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 680853771D965917002A491E /* dummy.m */; };
+		680853791D965917002A491E /* dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 680853771D965917002A491E /* dummy.m */; };
 		680922271D03F597008E1FFD /* EntryTableViewCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680922261D03F597008E1FFD /* EntryTableViewCellViewModelTests.swift */; };
 		6813800B1D3CAE6C00018040 /* EntryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6813800A1D3CAE6C00018040 /* EntryStore.swift */; };
 		6813800D1D3CAF3F00018040 /* EntryStoreImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6813800C1D3CAF3F00018040 /* EntryStoreImpl.swift */; };
@@ -74,6 +76,9 @@
 		68084DFC1D963F02002A491E /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		68084DFE1D963F13002A491E /* WeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		68084E001D963F23002A491E /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		680853751D965917002A491E /* NewsAppSwiftMVVM-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NewsAppSwiftMVVM-Bridging-Header.h"; sourceTree = "<group>"; };
+		680853761D965917002A491E /* NewsAppSwiftMVVMTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NewsAppSwiftMVVMTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		680853771D965917002A491E /* dummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dummy.m; sourceTree = "<group>"; };
 		680922261D03F597008E1FFD /* EntryTableViewCellViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryTableViewCellViewModelTests.swift; sourceTree = "<group>"; };
 		6813800A1D3CAE6C00018040 /* EntryStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryStore.swift; sourceTree = "<group>"; };
 		6813800C1D3CAF3F00018040 /* EntryStoreImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryStoreImpl.swift; sourceTree = "<group>"; };
@@ -280,6 +285,9 @@
 				68FBF7A01CE2302900A3D7C9 /* LaunchScreen.storyboard */,
 				6869F56B1D0D6B3100F1C549 /* UnderComputer-48.png */,
 				68FBF7A31CE2302900A3D7C9 /* Info.plist */,
+				680853771D965917002A491E /* dummy.m */,
+				680853751D965917002A491E /* NewsAppSwiftMVVM-Bridging-Header.h */,
+				680853761D965917002A491E /* NewsAppSwiftMVVMTests-Bridging-Header.h */,
 			);
 			path = NewsAppSwiftMVVM;
 			sourceTree = "<group>";
@@ -323,12 +331,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 68FBF7BC1CE2302A00A3D7C9 /* Build configuration list for PBXNativeTarget "NewsAppSwiftMVVM" */;
 			buildPhases = (
-				6BBEB07F45B3F91519D04898 /* 📦 Check Pods Manifest.lock */,
+				6BBEB07F45B3F91519D04898 /* [CP] Check Pods Manifest.lock */,
 				68FBF7901CE2302900A3D7C9 /* Sources */,
 				68FBF7911CE2302900A3D7C9 /* Frameworks */,
 				68FBF7921CE2302900A3D7C9 /* Resources */,
-				FFB7F8F6211E38EDBE03DB2D /* 📦 Embed Pods Frameworks */,
-				EF44529E413572916709CD46 /* 📦 Copy Pods Resources */,
+				FFB7F8F6211E38EDBE03DB2D /* [CP] Embed Pods Frameworks */,
+				EF44529E413572916709CD46 /* [CP] Copy Pods Resources */,
 				68691B9E1D93C10800843AC9 /* ShellScript */,
 			);
 			buildRules = (
@@ -344,12 +352,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 68FBF7BF1CE2302A00A3D7C9 /* Build configuration list for PBXNativeTarget "NewsAppSwiftMVVMTests" */;
 			buildPhases = (
-				47172CE577AEAF5EC3262865 /* 📦 Check Pods Manifest.lock */,
+				47172CE577AEAF5EC3262865 /* [CP] Check Pods Manifest.lock */,
 				68FBF7A41CE2302A00A3D7C9 /* Sources */,
 				68FBF7A51CE2302A00A3D7C9 /* Frameworks */,
 				68FBF7A61CE2302A00A3D7C9 /* Resources */,
-				D032E8DAF33F580159A11F12 /* 📦 Embed Pods Frameworks */,
-				1D94EC0496E821BA2A91E945 /* 📦 Copy Pods Resources */,
+				D032E8DAF33F580159A11F12 /* [CP] Embed Pods Frameworks */,
+				1D94EC0496E821BA2A91E945 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -365,11 +373,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 68FBF7C21CE2302A00A3D7C9 /* Build configuration list for PBXNativeTarget "NewsAppSwiftMVVMUITests" */;
 			buildPhases = (
-				131D9EAE316C2C4A84524D15 /* 📦 Check Pods Manifest.lock */,
+				131D9EAE316C2C4A84524D15 /* [CP] Check Pods Manifest.lock */,
 				68FBF7AF1CE2302A00A3D7C9 /* Sources */,
 				68FBF7B01CE2302A00A3D7C9 /* Frameworks */,
 				68FBF7B11CE2302A00A3D7C9 /* Resources */,
-				EFA14349D1EBC2067F8A97B7 /* 📦 Copy Pods Resources */,
+				EFA14349D1EBC2067F8A97B7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -460,14 +468,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		131D9EAE316C2C4A84524D15 /* 📦 Check Pods Manifest.lock */ = {
+		131D9EAE316C2C4A84524D15 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,14 +483,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		1D94EC0496E821BA2A91E945 /* 📦 Copy Pods Resources */ = {
+		1D94EC0496E821BA2A91E945 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -490,14 +498,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NewsAppSwiftMVVMTests/Pods-NewsAppSwiftMVVMTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		47172CE577AEAF5EC3262865 /* 📦 Check Pods Manifest.lock */ = {
+		47172CE577AEAF5EC3262865 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -518,14 +526,14 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
-		6BBEB07F45B3F91519D04898 /* 📦 Check Pods Manifest.lock */ = {
+		6BBEB07F45B3F91519D04898 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -533,14 +541,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		D032E8DAF33F580159A11F12 /* 📦 Embed Pods Frameworks */ = {
+		D032E8DAF33F580159A11F12 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -548,14 +556,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NewsAppSwiftMVVMTests/Pods-NewsAppSwiftMVVMTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EF44529E413572916709CD46 /* 📦 Copy Pods Resources */ = {
+		EF44529E413572916709CD46 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -563,14 +571,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NewsAppSwiftMVVM/Pods-NewsAppSwiftMVVM-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EFA14349D1EBC2067F8A97B7 /* 📦 Copy Pods Resources */ = {
+		EFA14349D1EBC2067F8A97B7 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -578,14 +586,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NewsAppSwiftMVVMUITests/Pods-NewsAppSwiftMVVMUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FFB7F8F6211E38EDBE03DB2D /* 📦 Embed Pods Frameworks */ = {
+		FFB7F8F6211E38EDBE03DB2D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -616,6 +624,7 @@
 				68691BAE1D9427D200843AC9 /* EntryViewController.swift in Sources */,
 				68C5442C1CE360770040AC49 /* CAPSPageMenu.swift in Sources */,
 				68C5442F1CE3617C0040AC49 /* TableViewController.swift in Sources */,
+				680853781D965917002A491E /* dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -629,6 +638,7 @@
 				68A3174F1D0AEF9900750C66 /* EntryTableViewCellTests.swift in Sources */,
 				685B169D1CF5EB5E0065A66C /* EntryTests.swift in Sources */,
 				68FBF7AD1CE2302A00A3D7C9 /* NewsAppSwiftMVVMTests.swift in Sources */,
+				680853791D965917002A491E /* dummy.m in Sources */,
 				68D13A781D22AF3C003B0690 /* EntrlesViewModelTests.swift in Sources */,
 				685B169F1CF5EE6B0065A66C /* EntryAPIServiceTests.swift in Sources */,
 			);
@@ -795,7 +805,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.NewsAppSwiftMVVM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "NewsAppSwiftMVVM/NewsAppSwiftMVVM-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				USER_HEADER_SEARCH_PATHS = "";
 			};
@@ -812,7 +822,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.NewsAppSwiftMVVM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "NewsAppSwiftMVVM/NewsAppSwiftMVVM-Bridging-Header.h";
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
@@ -827,7 +837,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.NewsAppSwiftMVVMTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "NewsAppSwiftMVVM/NewsAppSwiftMVVMTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NewsAppSwiftMVVM.app/NewsAppSwiftMVVM";
 			};
@@ -843,7 +853,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.NewsAppSwiftMVVMTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "NewsAppSwiftMVVM/NewsAppSwiftMVVMTests-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NewsAppSwiftMVVM.app/NewsAppSwiftMVVM";
 			};
 			name = Release;
