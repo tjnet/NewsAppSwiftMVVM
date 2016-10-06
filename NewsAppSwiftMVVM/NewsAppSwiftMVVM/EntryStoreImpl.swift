@@ -12,7 +12,7 @@ import RxAlamofire
 
 class EntryStoreImpl: EntryStore {
     func fetchEntries(query query: String) -> Driver<[Entry]> {
-        let url = "https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=http://menthas.com/\(query)/rss"
+        let url = "https://private-13084-devnewsapi.apiary-mock.com/\(query)"
         
         return JSON(.GET, url)
             .asDriver(onErrorJustReturn: []) //Builder just needs info about what to return in case of error.
