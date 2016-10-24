@@ -36,6 +36,7 @@
 		68C68C741D2A9769007459A5 /* TableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C68C731D2A9769007459A5 /* TableViewControllerTests.swift */; };
 		68C7F6E01DBE568C00E376A7 /* EntriesCollectionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68C7F6DF1DBE568C00E376A7 /* EntriesCollectionViewController.storyboard */; };
 		68C7F6E21DBE56C600E376A7 /* EntriesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C7F6E11DBE56C600E376A7 /* EntriesCollectionViewController.swift */; };
+		68C7F6E41DBE5C4600E376A7 /* EntriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C7F6E31DBE5C4600E376A7 /* EntriesCollectionViewCell.swift */; };
 		68D13A741D22A170003B0690 /* EntrlesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D13A731D22A170003B0690 /* EntrlesViewModel.swift */; };
 		68D13A781D22AF3C003B0690 /* EntrlesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D13A771D22AF3C003B0690 /* EntrlesViewModelTests.swift */; };
 		68D13A7A1D22C4B2003B0690 /* EntryTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D13A791D22C4B2003B0690 /* EntryTableViewCellViewModel.swift */; };
@@ -97,6 +98,7 @@
 		68C68C731D2A9769007459A5 /* TableViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewControllerTests.swift; sourceTree = "<group>"; };
 		68C7F6DF1DBE568C00E376A7 /* EntriesCollectionViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EntriesCollectionViewController.storyboard; sourceTree = "<group>"; };
 		68C7F6E11DBE56C600E376A7 /* EntriesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntriesCollectionViewController.swift; sourceTree = "<group>"; };
+		68C7F6E31DBE5C4600E376A7 /* EntriesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		68D13A731D22A170003B0690 /* EntrlesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntrlesViewModel.swift; sourceTree = "<group>"; };
 		68D13A771D22AF3C003B0690 /* EntrlesViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntrlesViewModelTests.swift; sourceTree = "<group>"; };
 		68D13A791D22C4B2003B0690 /* EntryTableViewCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryTableViewCellViewModel.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				68691BA11D93FDF600843AC9 /* EntriesTableViewController.storyboard */,
 				68C7F6DF1DBE568C00E376A7 /* EntriesCollectionViewController.storyboard */,
 				68C7F6E11DBE56C600E376A7 /* EntriesCollectionViewController.swift */,
+				68C7F6E31DBE5C4600E376A7 /* EntriesCollectionViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -616,6 +619,7 @@
 				6813800F1D3CC27200018040 /* EntryStoreMock.swift in Sources */,
 				684CF4561D1C274C00CAB7B2 /* EntryAPIService.swift in Sources */,
 				68084E011D963F23002A491E /* SettingsViewController.swift in Sources */,
+				68C7F6E41DBE5C4600E376A7 /* EntriesCollectionViewCell.swift in Sources */,
 				68FBF7981CE2302900A3D7C9 /* AppDelegate.swift in Sources */,
 				6813800B1D3CAE6C00018040 /* EntryStore.swift in Sources */,
 				68084DFD1D963F02002A491E /* SearchViewController.swift in Sources */,

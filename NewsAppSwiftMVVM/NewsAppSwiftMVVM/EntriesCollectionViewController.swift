@@ -8,7 +8,12 @@
 
 import UIKit
 
-class EntriesCollectionViewController: UIViewController, UICollectionViewDataSource {
+class EntriesCollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    let paddingBetweenCells: Int = 0
+    let numberOfCells: Int = 2
+    
+    @IBOutlet weak var collectionView: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +29,8 @@ class EntriesCollectionViewController: UIViewController, UICollectionViewDataSou
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 30
     }
+
+
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
@@ -35,7 +42,12 @@ class EntriesCollectionViewController: UIViewController, UICollectionViewDataSou
                                        alpha: 1.0)
         return cell
     }
+    
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
+    }
 
+    
     /*
     // MARK: - Navigation
 
@@ -45,5 +57,19 @@ class EntriesCollectionViewController: UIViewController, UICollectionViewDataSou
         // Pass the selected object to the new view controller.
     }
     */
+
+
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
+        return 1
+    }
+
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        
+        return CGSizeMake(self.view.frame.size.width/2.0, 200)
+    }
 
 }
