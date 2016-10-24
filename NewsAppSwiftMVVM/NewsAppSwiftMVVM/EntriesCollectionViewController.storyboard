@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="g1b-ym-1d2">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="g1b-ym-1d2">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kbu-TH-Gnk">
                                     <size key="itemSize" width="50" height="50"/>
@@ -26,7 +26,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="fBZ-ue-uCf">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EntriesCollectionViewCell" id="fBZ-ue-uCf">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -36,9 +36,18 @@
                                         </view>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="2d6-Hw-W4E" id="CXb-3n-aEm"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="adO-sD-1EE" firstAttribute="top" secondItem="g1b-ym-1d2" secondAttribute="bottom" id="4KK-8P-vOM"/>
+                            <constraint firstItem="g1b-ym-1d2" firstAttribute="leading" secondItem="KuQ-NS-mK4" secondAttribute="leading" id="UcK-kr-7RV"/>
+                            <constraint firstAttribute="trailing" secondItem="g1b-ym-1d2" secondAttribute="trailing" id="Yag-KR-VP5"/>
+                            <constraint firstItem="g1b-ym-1d2" firstAttribute="top" secondItem="KuQ-NS-mK4" secondAttribute="top" id="t1a-vm-VYS"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4aX-OQ-czC" userLabel="First Responder" sceneMemberID="firstResponder"/>

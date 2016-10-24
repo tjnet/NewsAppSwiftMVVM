@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EntriesCollectionViewController: UIViewController {
+class EntriesCollectionViewController: UIViewController, UICollectionViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +21,20 @@ class EntriesCollectionViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 30
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("EntriesCollectionViewCell", forIndexPath: indexPath) as UICollectionViewCell
+        
+        cell.backgroundColor = UIColor(red: CGFloat(drand48()),
+                                       green: CGFloat(drand48()),
+                                       blue: CGFloat(drand48()),
+                                       alpha: 1.0)
+        return cell
+    }
 
     /*
     // MARK: - Navigation
