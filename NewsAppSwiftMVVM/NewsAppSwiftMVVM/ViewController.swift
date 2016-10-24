@@ -37,7 +37,13 @@ class ViewController: UIViewController {
         // (Can be any UIViewController subclass)
         // Make sure the title property of all view controllers is set
         // Example:
-        var controller1 : UIViewController = TableViewController(nibName: "TableViewController", title: "top")
+
+//        var controller1 : UIViewController = TableViewController(nibName: "TableViewController", title: "top")
+//        controllerArray.append(controller1)
+        
+        let storyboard = UIStoryboard(name: "EntriesCollectionViewController", bundle: nil)
+        let controller1 = storyboard.instantiateViewControllerWithIdentifier("EntriesCollectionViewController")
+        controller1.title = "top"
         controllerArray.append(controller1)
         
         var controller2 : UIViewController = TableViewController(nibName: "TableViewController", title: "ruby")

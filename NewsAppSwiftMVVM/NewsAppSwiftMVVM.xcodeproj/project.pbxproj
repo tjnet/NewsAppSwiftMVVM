@@ -34,6 +34,8 @@
 		68C544301CE3617C0040AC49 /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68C5442E1CE3617C0040AC49 /* TableViewController.xib */; };
 		68C544371CE36A9C0040AC49 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C544361CE36A9C0040AC49 /* Entry.swift */; };
 		68C68C741D2A9769007459A5 /* TableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C68C731D2A9769007459A5 /* TableViewControllerTests.swift */; };
+		68C7F6E01DBE568C00E376A7 /* EntriesCollectionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68C7F6DF1DBE568C00E376A7 /* EntriesCollectionViewController.storyboard */; };
+		68C7F6E21DBE56C600E376A7 /* EntriesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C7F6E11DBE56C600E376A7 /* EntriesCollectionViewController.swift */; };
 		68D13A741D22A170003B0690 /* EntrlesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D13A731D22A170003B0690 /* EntrlesViewModel.swift */; };
 		68D13A781D22AF3C003B0690 /* EntrlesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D13A771D22AF3C003B0690 /* EntrlesViewModelTests.swift */; };
 		68D13A7A1D22C4B2003B0690 /* EntryTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D13A791D22C4B2003B0690 /* EntryTableViewCellViewModel.swift */; };
@@ -93,6 +95,8 @@
 		68C5442E1CE3617C0040AC49 /* TableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TableViewController.xib; path = ../TableViewController.xib; sourceTree = "<group>"; };
 		68C544361CE36A9C0040AC49 /* Entry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		68C68C731D2A9769007459A5 /* TableViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewControllerTests.swift; sourceTree = "<group>"; };
+		68C7F6DF1DBE568C00E376A7 /* EntriesCollectionViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EntriesCollectionViewController.storyboard; sourceTree = "<group>"; };
+		68C7F6E11DBE56C600E376A7 /* EntriesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntriesCollectionViewController.swift; sourceTree = "<group>"; };
 		68D13A731D22A170003B0690 /* EntrlesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntrlesViewModel.swift; sourceTree = "<group>"; };
 		68D13A771D22AF3C003B0690 /* EntrlesViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntrlesViewModelTests.swift; sourceTree = "<group>"; };
 		68D13A791D22C4B2003B0690 /* EntryTableViewCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryTableViewCellViewModel.swift; sourceTree = "<group>"; };
@@ -203,6 +207,8 @@
 				68084DF41D963BDE002A491E /* SearchViewController.storyboard */,
 				68084DFC1D963F02002A491E /* SearchViewController.swift */,
 				68691BA11D93FDF600843AC9 /* EntriesTableViewController.storyboard */,
+				68C7F6DF1DBE568C00E376A7 /* EntriesCollectionViewController.storyboard */,
+				68C7F6E11DBE56C600E376A7 /* EntriesCollectionViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -435,6 +441,7 @@
 				68FBF79F1CE2302900A3D7C9 /* Assets.xcassets in Resources */,
 				68FA0DB71D0D0B470035972E /* EntryTableViewCell.xib in Resources */,
 				68084DF81D963C1D002A491E /* WeatherViewController.storyboard in Resources */,
+				68C7F6E01DBE568C00E376A7 /* EntriesCollectionViewController.storyboard in Resources */,
 				6869F56C1D0D6B3100F1C549 /* UnderComputer-48.png in Resources */,
 				68084DF61D963BDE002A491E /* SearchViewController.storyboard in Resources */,
 				68FBF79D1CE2302900A3D7C9 /* Main.storyboard in Resources */,
@@ -601,6 +608,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68C544371CE36A9C0040AC49 /* Entry.swift in Sources */,
+				68C7F6E21DBE56C600E376A7 /* EntriesCollectionViewController.swift in Sources */,
 				68084DFF1D963F13002A491E /* WeatherViewController.swift in Sources */,
 				68D13A741D22A170003B0690 /* EntrlesViewModel.swift in Sources */,
 				68FBF79A1CE2302900A3D7C9 /* ViewController.swift in Sources */,
