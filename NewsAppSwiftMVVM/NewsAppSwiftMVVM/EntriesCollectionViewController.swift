@@ -69,7 +69,14 @@ class EntriesCollectionViewController: UIViewController, UICollectionViewDataSou
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         
-        return CGSizeMake(self.view.frame.size.width/2.0, 200)
+        switch(indexPath.row){
+        case 0:
+            return CGSizeMake(self.view.frame.size.width, 200)
+        default:
+            return CGSizeMake(self.view.frame.size.width/2.0, 200)
+        }
+        
+        
     }
 
 }
