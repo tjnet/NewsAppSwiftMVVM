@@ -24,21 +24,26 @@ class EntryTableViewCell: UITableViewCell {
     
     var link: String! {
         didSet {
-            Alamofire.request(.GET, ogpApi + link).responseJSON { response in
-                if let imageUrl = response.result.value?["image"] as? String {
-                    self.setThumbnailImageView(NSURL(string: imageUrl))
+            Alamofire.request(ogpApi + link).responseJSON { response in
+                if let result = response.result.value as? [String:[Any]] {
+                    if let imageUrl = result["image"] {
+//                      self.setThumbnailImageView(imageUrl: NSURL(string: imageUrl))
+                    }
                 }
+//                if let imageUrl = response.result.value?["image"] as? String {
+//                    self.setThumbnailImageView(NSURL(string: imageUrl))
+//                }
             }
         }
     }
     
     func setThumbnailImageView(imageUrl: NSURL!){
-        self.thumbnailView.sd_setImageWithURL(imageUrl, placeholderImage: UIImage(named: "UnderComputer-48.png")){// see https://icons8.com/web-app/for/all/developper
-            (image, error, cacheType, url)->Void in
-            UIView.animateWithDuration(0.80){
-                self.thumbnailView.alpha = 1
-            }
-        }
+//        self.thumbnailView.sd_setImageWithURL(imageUrl, placeholderImage: UIImage(named: "UnderComputer-48.png")){// see https://icons8.com/web-app/for/all/developper
+//            (image, error, cacheType, url)->Void in
+//            UIView.animateWithDuration(0.80){
+//                self.thumbnailView.alpha = CGFloat(1.0)
+//            }
+//        }
     }
     
     override func awakeFromNib() {

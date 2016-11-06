@@ -20,6 +20,8 @@ class TableViewController: UIViewController, UITableViewDelegate {
     private let bag = DisposeBag()
     var entryList: [Entry]  = []
     
+    var entries = Variable([Entry]())
+    
     // create ViewModel
     let viewModel = EntriesViewModel(service: EntryAPIService(entryStore: EntryStoreImpl()))
     
@@ -34,9 +36,9 @@ class TableViewController: UIViewController, UITableViewDelegate {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        self.tableView.registerNib(UINib(nibName: "EntryTableViewCell", bundle: nil), forCellReuseIdentifier: "EntryTableViewCell")
+        self.tableView.register(UINib(nibName: "EntryTableViewCell", bundle: nil), forCellReuseIdentifier: "EntryTableViewCell")
         
-        viewModel.reloadData(self.title!)
+        viewModel.reloadData(title: self.title!)
         
         // see http://yannickloriot.com/2016/01/make-uitableview-reactive-with-rxswift/
         // bind articles to UITableView
@@ -44,14 +46,14 @@ class TableViewController: UIViewController, UITableViewDelegate {
         // If there is a `drive` method available instead of `bindTo`,
         // that means that the compiler has proven that all properties
         // are satisfied.
-        viewModel.entries.drive(self.tableView.rx_itemsWithCellIdentifier("EntryTableViewCell")) {
-            (index, entry: Entry, cell:EntryTableViewCell) in
-            cell.updateCell(entry)
+        entries.asObservable().bindTo(self.tableView.rx.items(cellIdentifier: "EntryTableViewCell")){ (index: Int, entry: Entry, cell:EntryTableViewCell) in
+            cell.updateCell(entry: entry)
         }.addDisposableTo(bag)
         
-        viewModel.entries.driveNext { [unowned self] in
-            self.entryList = $0
-        }.addDisposableTo(bag)
+//        viewModel.entries.drive(onNext: { [unowned self] in
+//            self.entryList = $0
+//        }).addDisposableTo(bag)
+        
         
     }
 
@@ -63,7 +65,7 @@ class TableViewController: UIViewController, UITableViewDelegate {
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
         struct Cell {
-            static var cell = UINib(nibName: "EntryTableViewCell", bundle: nil).instantiateWithOwner(nil, options: nil).first as! EntryTableViewCell
+            static var cell = UINib(nibName: "EntryTableViewCell", bundle: nil).instantiate(withOwner: nil, options: nil).first as! EntryTableViewCell
         }
         
         Cell.cell.setNeedsLayout()
@@ -77,22 +79,22 @@ class TableViewController: UIViewController, UITableViewDelegate {
         
         let entry = self.entryList[indexPath.row]
         let storyboard = UIStoryboard(name: "EntryViewController", bundle: nil)
-        let entryVC : EntryViewController = storyboard.instantiateViewControllerWithIdentifier("EntryViewController") as! EntryViewController
+        let entryVC : EntryViewController = storyboard.instantiateViewController(withIdentifier: "EntryViewController") as! EntryViewController
         entryVC.url = NSURL(string: entry.link)!
         self.navigationController?.pushViewController(entryVC, animated: true)
         
-        reloadRowsAtIndexPath(indexPath)
+        reloadRowsAtIndexPath(indexPath: indexPath)
     }
     
     
     func reloadRowsAtIndexPath(indexPath: NSIndexPath) {
-        tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.None)
+        tableView.reloadRows(at: [indexPath as IndexPath], with: UITableViewRowAnimation.none)
     }
 
     
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         cell.contentView.alpha = 0
-        UIView.animateWithDuration(NSTimeInterval(0.8), animations: {
+        UIView.animate(withDuration: TimeInterval(0.8), animations: {
             cell.contentView.alpha = 1
         })
     }

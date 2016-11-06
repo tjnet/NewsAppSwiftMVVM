@@ -19,12 +19,12 @@ class ViewController: UIViewController {
         
         // MARK: - UI Setup
         self.title = "Dev News"
-        self.navigationController?.navigationBar.barTintColor = UIColor.whiteColor()
+        self.navigationController?.navigationBar.barTintColor = UIColor.white
         self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
-        self.navigationController?.navigationBar.tintColor = UIColor.grayColor()
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.tintColor = UIColor.gray
         
-        let backItem = UIBarButtonItem(title: "", style: .Bordered, target: nil, action: nil)
+        let backItem = UIBarButtonItem(title: "", style: .bordered, target: nil, action: nil)
         self.navigationItem.backBarButtonItem = backItem
         
         // Do any additional setup after loading the view, typically from a nib.
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
 //        controllerArray.append(controller1)
         
         let storyboard = UIStoryboard(name: "EntriesCollectionViewController", bundle: nil)
-        let controller1 = storyboard.instantiateViewControllerWithIdentifier("EntriesCollectionViewController")
+        let controller1 = storyboard.instantiateViewController(withIdentifier: "EntriesCollectionViewController")
         controller1.title = "top"
         controllerArray.append(controller1)
         
@@ -58,28 +58,25 @@ class ViewController: UIViewController {
         // Customize page menu to your liking (optional) or use default settings by sending nil for 'options' in the init
         // Example:
         var parameters: [CAPSPageMenuOption] = [
-            .ScrollMenuBackgroundColor(UIColor.whiteColor()),
-            .SelectionIndicatorColor(UIColor.clearColor()),
-            .ViewBackgroundColor(UIColor.whiteColor()),
-            .MenuItemFont(UIFont(name: "HelveticaNeue-Bold", size: 16.0)!),
-            .MenuHeight(30.0),
-            .MenuMargin(0),
-            .MenuItemWidth(120),
-            .CenterMenuItems(true)
+            .selectionIndicatorColor(UIColor.clear),
+            .viewBackgroundColor(UIColor.white),
+            .menuItemFont(UIFont(name: "HelveticaNeue-Bold", size: 16.0)!),
+            .menuHeight(30.0),
+            .menuMargin(0),
+            .menuItemWidth(120),
+            .centerMenuItems(true)
         ]
         
         // Initialize page menu with controller array, frame, and optional parameters
-        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 0.0, self.view.frame.width, self.view.frame.height), pageMenuOptions: parameters)
+        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRect(x: 0.0, y: 0.0, width: self.view.frame.width, height: self.view.frame.height), pageMenuOptions: parameters)
         
         
         self.addChildViewController(pageMenu!)
         self.view.addSubview(pageMenu!.view)
         
-        pageMenu!.didMoveToParentViewController(self)
+        pageMenu!.didMove(toParentViewController: self)
     }
     
-    override func viewWillDisappear(animated: Bool) {
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

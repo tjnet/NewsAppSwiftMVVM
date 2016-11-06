@@ -92,7 +92,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/RxSwift/RxSwift.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SDWebImage/SDWebImage.framework"
   install_framework "$BUILT_PRODUCTS_DIR/RxBlocking/RxBlocking.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/RxTests/RxTests.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
@@ -103,5 +102,4 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/RxSwift/RxSwift.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SDWebImage/SDWebImage.framework"
   install_framework "$BUILT_PRODUCTS_DIR/RxBlocking/RxBlocking.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/RxTests/RxTests.framework"
 fi

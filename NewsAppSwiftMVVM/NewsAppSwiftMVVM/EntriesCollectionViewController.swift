@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import RxSwift
 
-class EntriesCollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class EntriesCollectionViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     let paddingBetweenCells: Int = 0
     let numberOfCells: Int = 2
+    
+    private let bag = DisposeBag()
     
     @IBOutlet weak var collectionView: UICollectionView!
 
@@ -19,6 +22,20 @@ class EntriesCollectionViewController: UIViewController, UICollectionViewDataSou
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+//        let items = Observable.just([
+//            Entry(),
+//            Entry(),
+//            Entry()
+//            ])
+//        items
+//            .bindTo(collectionView.rx.items) { (collectionView, row, element) in
+//                let indexPath = IndexPath(row: row, section: 0)
+//                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EntriesCollectionViewCell", for: indexPath) as! EntriesCollectionViewCell
+//                cell.caption?.text = "\(element) @ \(row)"
+//                return cell
+//            }
+//            .addDisposableTo(bag)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,19 +43,18 @@ class EntriesCollectionViewController: UIViewController, UICollectionViewDataSou
         // Dispose of any resources that can be recreated.
     }
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 30
     }
 
 
-    
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EntriesCollectionViewCell", for: indexPath as IndexPath) as! EntriesCollectionViewCell
         
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("EntriesCollectionViewCell", forIndexPath: indexPath) as! EntriesCollectionViewCell
-        
-        cell.backgroundColor = UIColor.whiteColor()
+        cell.caption.text = "hoge"
         return cell
     }
+    
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
@@ -64,13 +80,13 @@ class EntriesCollectionViewController: UIViewController, UICollectionViewDataSou
         return 0
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         switch(indexPath.row){
         case 0:
-            return CGSizeMake(self.view.frame.size.width, 200)
+            return CGSize(width: self.view.frame.size.width, height: 200)
         default:
-            return CGSizeMake(self.view.frame.size.width/2.0, 200)
+            return CGSize(width: self.view.frame.size.width * 0.5 - 4.0, height: 200)
         }
         
         

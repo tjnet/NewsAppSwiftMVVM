@@ -1,47 +1,43 @@
 PODS:
-  - Alamofire (3.4.0)
-  - Realm (1.0.0):
-    - Realm/Headers (= 1.0.0)
-  - Realm/Headers (1.0.0)
-  - RealmSwift (1.0.0):
-    - Realm (= 1.0.0)
-  - RxAlamofire (2.4):
-    - RxAlamofire/Core (= 2.4)
-  - RxAlamofire/Core (2.4):
-    - Alamofire (~> 3.4)
-    - RxSwift (~> 2.4)
-  - RxBlocking (2.5.0):
-    - RxSwift (~> 2.5)
-  - RxCocoa (2.5.0):
-    - RxSwift (~> 2.5)
-  - RxSwift (2.5.0)
-  - RxTests (2.5.0):
-    - RxSwift (~> 2.5)
-  - SDWebImage (3.7.6):
-    - SDWebImage/Core (= 3.7.6)
-  - SDWebImage/Core (3.7.6)
+  - Alamofire (4.0.1)
+  - Realm (2.0.3):
+    - Realm/Headers (= 2.0.3)
+  - Realm/Headers (2.0.3)
+  - RealmSwift (2.0.3):
+    - Realm (= 2.0.3)
+  - RxAlamofire (3.0.0):
+    - RxAlamofire/Core (= 3.0.0)
+  - RxAlamofire/Core (3.0.0):
+    - Alamofire (~> 4.0)
+    - RxSwift (~> 3.0)
+  - RxBlocking (3.0.0):
+    - RxSwift (~> 3.0)
+  - RxCocoa (3.0.0):
+    - RxSwift (~> 3.0)
+  - RxSwift (3.0.0)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
 
 DEPENDENCIES:
   - Alamofire
   - RealmSwift
   - RxAlamofire
-  - RxBlocking (~> 2.0)
-  - RxCocoa (~> 2.0)
-  - RxSwift (~> 2.0)
-  - RxTests (~> 2.0)
-  - SDWebImage (~> 3.7)
+  - RxBlocking
+  - RxCocoa (~> 3.0.0)
+  - RxSwift (~> 3.0.0)
+  - SDWebImage (~> 3.8)
 
 SPEC CHECKSUMS:
-  Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
-  Realm: e15cd8e7c11d3e576f628ba0b7cb855269b4991c
-  RealmSwift: 3229306d020d96f83b335f87a0dcbf2cef0e6a2b
-  RxAlamofire: b72b5ca3e46b0d0cae0a19f8287b5f07a99866a7
-  RxBlocking: 595d9ab56dde6b00beaa5aba40e95b150d2135f1
-  RxCocoa: e1b1562e57a554d0fb2aabf9d71b637f177257c7
-  RxSwift: 402b41a50e922a0368fc14cb3bc9f4427920e8ae
-  RxTests: 1b13bea0a138552b52aeead549ef08d578bcda9e
-  SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  Realm: 5f008bfe3c8c47142eddfc30b8c1584cde22db24
+  RealmSwift: 5afb451f65b682242f272dbb52d5c6f6e343c980
+  RxAlamofire: 0b1fa48f545fffe7f7a28af2086bcaa3b5946cc9
+  RxBlocking: 0132c660340d8b8f34b65b2e099167ea6134eecf
+  RxCocoa: 0a2f3ae381cf16f4021a4cee7a4420f83058a965
+  RxSwift: a930cd662f5b4a7ca9dc3518585dba91dadf497c
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
 
-PODFILE CHECKSUM: 82df532712cbc743fccd08171aa5961e2e2005c8
+PODFILE CHECKSUM: 9b6bcd4f7c3abf692aeec06374646765baaa070e
 
-COCOAPODS: 1.0.0
+COCOAPODS: 1.1.1

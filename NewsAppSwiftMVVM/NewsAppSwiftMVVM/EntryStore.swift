@@ -7,7 +7,9 @@
 //
 
 import RxCocoa
+import RxSwift
 
 protocol EntryStore {
-    func fetchEntries(query query: String) -> Driver<[Entry]>
+//    func fetchEntries(query query: String) -> Driver<[Entry]>
+    func fetchEntries(query: String) -> Observable<[Entry]>
 }
