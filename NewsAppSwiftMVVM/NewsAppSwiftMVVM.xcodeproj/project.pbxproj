@@ -17,6 +17,9 @@
 		68084E011D963F23002A491E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68084E001D963F23002A491E /* SettingsViewController.swift */; };
 		680922271D03F597008E1FFD /* EntryTableViewCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680922261D03F597008E1FFD /* EntryTableViewCellViewModelTests.swift */; };
 		680B0B021DD36B610007EB99 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680B0B011DD36B610007EB99 /* BasePresenter.swift */; };
+		680B0B041DD36DD00007EB99 /* EntriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680B0B031DD36DD00007EB99 /* EntriesPresenter.swift */; };
+		680B0B061DD36F570007EB99 /* ListEntriesUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680B0B051DD36F570007EB99 /* ListEntriesUI.swift */; };
+		680B0B081DD370140007EB99 /* BaseUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680B0B071DD370140007EB99 /* BaseUI.swift */; };
 		6813800B1D3CAE6C00018040 /* EntryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6813800A1D3CAE6C00018040 /* EntryStore.swift */; };
 		6813800D1D3CAF3F00018040 /* EntryStoreImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6813800C1D3CAF3F00018040 /* EntryStoreImpl.swift */; };
 		6813800F1D3CC27200018040 /* EntryStoreMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6813800E1D3CC27200018040 /* EntryStoreMock.swift */; };
@@ -81,6 +84,9 @@
 		68084E001D963F23002A491E /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		680922261D03F597008E1FFD /* EntryTableViewCellViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryTableViewCellViewModelTests.swift; sourceTree = "<group>"; };
 		680B0B011DD36B610007EB99 /* BasePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		680B0B031DD36DD00007EB99 /* EntriesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntriesPresenter.swift; sourceTree = "<group>"; };
+		680B0B051DD36F570007EB99 /* ListEntriesUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEntriesUI.swift; sourceTree = "<group>"; };
+		680B0B071DD370140007EB99 /* BaseUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseUI.swift; sourceTree = "<group>"; };
 		6813800A1D3CAE6C00018040 /* EntryStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryStore.swift; sourceTree = "<group>"; };
 		6813800C1D3CAF3F00018040 /* EntryStoreImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryStoreImpl.swift; sourceTree = "<group>"; };
 		6813800E1D3CC27200018040 /* EntryStoreMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryStoreMock.swift; sourceTree = "<group>"; };
@@ -216,6 +222,8 @@
 				68C7F6DF1DBE568C00E376A7 /* EntriesCollectionViewController.storyboard */,
 				68C7F6E11DBE56C600E376A7 /* EntriesCollectionViewController.swift */,
 				68C7F6E31DBE5C4600E376A7 /* EntriesCollectionViewCell.swift */,
+				680B0B031DD36DD00007EB99 /* EntriesPresenter.swift */,
+				680B0B051DD36F570007EB99 /* ListEntriesUI.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -285,6 +293,7 @@
 			children = (
 				680B0B011DD36B610007EB99 /* BasePresenter.swift */,
 				687CBB661DCECD2F00AF6F23 /* CAPSPageMenu.swift */,
+				680B0B071DD370140007EB99 /* BaseUI.swift */,
 				681380101D3CCC8400018040 /* Service */,
 				683D54981CF9F6FD009A62BF /* ViewModel */,
 				68C544331CE3696C0040AC49 /* Model */,
@@ -642,6 +651,7 @@
 				68D13A741D22A170003B0690 /* EntrlesViewModel.swift in Sources */,
 				68FBF79A1CE2302900A3D7C9 /* ViewController.swift in Sources */,
 				68D13A7A1D22C4B2003B0690 /* EntryTableViewCellViewModel.swift in Sources */,
+				680B0B041DD36DD00007EB99 /* EntriesPresenter.swift in Sources */,
 				6813800F1D3CC27200018040 /* EntryStoreMock.swift in Sources */,
 				684CF4561D1C274C00CAB7B2 /* EntryAPIService.swift in Sources */,
 				687CBB671DCECD2F00AF6F23 /* CAPSPageMenu.swift in Sources */,
@@ -650,8 +660,10 @@
 				68FBF7981CE2302900A3D7C9 /* AppDelegate.swift in Sources */,
 				6813800B1D3CAE6C00018040 /* EntryStore.swift in Sources */,
 				687CBB691DCEE55F00AF6F23 /* NewsAppError.swift in Sources */,
+				680B0B061DD36F570007EB99 /* ListEntriesUI.swift in Sources */,
 				68084DFD1D963F02002A491E /* SearchViewController.swift in Sources */,
 				6813800D1D3CAF3F00018040 /* EntryStoreImpl.swift in Sources */,
+				680B0B081DD370140007EB99 /* BaseUI.swift in Sources */,
 				68A3174A1D0AEC5100750C66 /* EntryTableViewCell.swift in Sources */,
 				68691BAE1D9427D200843AC9 /* EntryViewController.swift in Sources */,
 				68C5442F1CE3617C0040AC49 /* TableViewController.swift in Sources */,
