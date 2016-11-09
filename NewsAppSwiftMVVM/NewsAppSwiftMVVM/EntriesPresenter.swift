@@ -11,7 +11,17 @@ import RxSwift
 
 class EntriesPresenter: BasePresenter {
     
+    private let ui: ListEntriesUI
     
+    init(ui: ListEntriesUI){
+        self.ui = ui
+    }
+
+    func viewDidLoad() {
+        
+    }
     
-    
+    private func showEntries(){
+        
+    }
 }
