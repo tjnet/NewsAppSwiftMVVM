@@ -16,6 +16,7 @@
 		68084DFF1D963F13002A491E /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68084DFE1D963F13002A491E /* WeatherViewController.swift */; };
 		68084E011D963F23002A491E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68084E001D963F23002A491E /* SettingsViewController.swift */; };
 		680922271D03F597008E1FFD /* EntryTableViewCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680922261D03F597008E1FFD /* EntryTableViewCellViewModelTests.swift */; };
+		680B0B021DD36B610007EB99 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680B0B011DD36B610007EB99 /* BasePresenter.swift */; };
 		6813800B1D3CAE6C00018040 /* EntryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6813800A1D3CAE6C00018040 /* EntryStore.swift */; };
 		6813800D1D3CAF3F00018040 /* EntryStoreImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6813800C1D3CAF3F00018040 /* EntryStoreImpl.swift */; };
 		6813800F1D3CC27200018040 /* EntryStoreMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6813800E1D3CC27200018040 /* EntryStoreMock.swift */; };
@@ -79,6 +80,7 @@
 		68084DFE1D963F13002A491E /* WeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		68084E001D963F23002A491E /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		680922261D03F597008E1FFD /* EntryTableViewCellViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryTableViewCellViewModelTests.swift; sourceTree = "<group>"; };
+		680B0B011DD36B610007EB99 /* BasePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		6813800A1D3CAE6C00018040 /* EntryStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryStore.swift; sourceTree = "<group>"; };
 		6813800C1D3CAF3F00018040 /* EntryStoreImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryStoreImpl.swift; sourceTree = "<group>"; };
 		6813800E1D3CC27200018040 /* EntryStoreMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryStoreMock.swift; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 		68FBF7961CE2302900A3D7C9 /* NewsAppSwiftMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				680B0B011DD36B610007EB99 /* BasePresenter.swift */,
 				687CBB661DCECD2F00AF6F23 /* CAPSPageMenu.swift */,
 				681380101D3CCC8400018040 /* Service */,
 				683D54981CF9F6FD009A62BF /* ViewModel */,
@@ -633,6 +636,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68C544371CE36A9C0040AC49 /* Entry.swift in Sources */,
+				680B0B021DD36B610007EB99 /* BasePresenter.swift in Sources */,
 				68C7F6E21DBE56C600E376A7 /* EntriesCollectionViewController.swift in Sources */,
 				68084DFF1D963F13002A491E /* WeatherViewController.swift in Sources */,
 				68D13A741D22A170003B0690 /* EntrlesViewModel.swift in Sources */,
