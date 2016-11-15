@@ -17,6 +17,11 @@ target 'NewsAppSwiftMVVM' do
   pod 'SDWebImage',    '~> 3.8'
 end
 
+def testing_pods
+  pod 'Quick'
+  pod 'Nimble'
+end
+
 target 'NewsAppSwiftMVVMTests' do
   #Rx
   pod 'RxSwift',    '~> 3.0.0'
@@ -30,8 +35,10 @@ target 'NewsAppSwiftMVVMTests' do
   pod 'RxBlocking'
   #pod 'RxTests',    '~> 2.0'
   pod 'SDWebImage',    '~> 3.8'
+  
+  testing_pods
 end
 
 target 'NewsAppSwiftMVVMUITests' do
-
+  inherit! :search_paths
 end

@@ -1,5 +1,7 @@
 PODS:
   - Alamofire (4.0.1)
+  - Nimble (5.1.1)
+  - Quick (0.10.0)
   - Realm (2.0.3):
     - Realm/Headers (= 2.0.3)
   - Realm/Headers (2.0.3)
@@ -21,6 +23,8 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - Nimble
+  - Quick
   - RealmSwift
   - RxAlamofire
   - RxBlocking
@@ -30,6 +34,8 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
+  Quick: 5d290df1c69d5ee2f0729956dcf0fd9a30447eaa
   Realm: 5f008bfe3c8c47142eddfc30b8c1584cde22db24
   RealmSwift: 5afb451f65b682242f272dbb52d5c6f6e343c980
   RxAlamofire: 0b1fa48f545fffe7f7a28af2086bcaa3b5946cc9
@@ -38,6 +44,6 @@ SPEC CHECKSUMS:
   RxSwift: a930cd662f5b4a7ca9dc3518585dba91dadf497c
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
 
-PODFILE CHECKSUM: 9b6bcd4f7c3abf692aeec06374646765baaa070e
+PODFILE CHECKSUM: 36eaf348b789689e86b796b16172065f8514592e
 
 COCOAPODS: 1.1.1

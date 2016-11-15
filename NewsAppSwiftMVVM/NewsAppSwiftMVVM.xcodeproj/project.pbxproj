@@ -25,6 +25,7 @@
 		6813800F1D3CC27200018040 /* EntryStoreMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6813800E1D3CC27200018040 /* EntryStoreMock.swift */; };
 		681380131D3CD0D400018040 /* EntryStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681380121D3CD0D400018040 /* EntryStoreTests.swift */; };
 		684CF4561D1C274C00CAB7B2 /* EntryAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684CF4551D1C274C00CAB7B2 /* EntryAPIService.swift */; };
+		684EAA101DDB5DF800B7D971 /* EntryWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684EAA0F1DDB5DF800B7D971 /* EntryWireframe.swift */; };
 		685B169D1CF5EB5E0065A66C /* EntryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685B169C1CF5EB5E0065A66C /* EntryTests.swift */; };
 		685B169F1CF5EE6B0065A66C /* EntryAPIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685B169E1CF5EE6B0065A66C /* EntryAPIServiceTests.swift */; };
 		68691BA31D93FDF600843AC9 /* EntriesTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68691BA11D93FDF600843AC9 /* EntriesTableViewController.storyboard */; };
@@ -92,6 +93,7 @@
 		6813800E1D3CC27200018040 /* EntryStoreMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryStoreMock.swift; sourceTree = "<group>"; };
 		681380121D3CD0D400018040 /* EntryStoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryStoreTests.swift; sourceTree = "<group>"; };
 		684CF4551D1C274C00CAB7B2 /* EntryAPIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryAPIService.swift; sourceTree = "<group>"; };
+		684EAA0F1DDB5DF800B7D971 /* EntryWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryWireframe.swift; sourceTree = "<group>"; };
 		685B169C1CF5EB5E0065A66C /* EntryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryTests.swift; sourceTree = "<group>"; };
 		685B169E1CF5EE6B0065A66C /* EntryAPIServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryAPIServiceTests.swift; sourceTree = "<group>"; };
 		68691BA21D93FDF600843AC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/EntriesTableViewController.storyboard; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 				68C7F6E31DBE5C4600E376A7 /* EntriesCollectionViewCell.swift */,
 				680B0B031DD36DD00007EB99 /* EntriesPresenter.swift */,
 				680B0B051DD36F570007EB99 /* ListEntriesUI.swift */,
+				684EAA0F1DDB5DF800B7D971 /* EntryWireframe.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -655,6 +658,7 @@
 				6813800F1D3CC27200018040 /* EntryStoreMock.swift in Sources */,
 				684CF4561D1C274C00CAB7B2 /* EntryAPIService.swift in Sources */,
 				687CBB671DCECD2F00AF6F23 /* CAPSPageMenu.swift in Sources */,
+				684EAA101DDB5DF800B7D971 /* EntryWireframe.swift in Sources */,
 				68084E011D963F23002A491E /* SettingsViewController.swift in Sources */,
 				68C7F6E41DBE5C4600E376A7 /* EntriesCollectionViewCell.swift in Sources */,
 				68FBF7981CE2302900A3D7C9 /* AppDelegate.swift in Sources */,

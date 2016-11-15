@@ -12,6 +12,7 @@ import RxSwift
 class EntriesCollectionViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     var viewController: UIViewController { return self }
+    var presenter: EntriesPresenter!
     
     let paddingBetweenCells: Int = 0
     let numberOfCells: Int = 2
