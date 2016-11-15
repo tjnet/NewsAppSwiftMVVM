@@ -11,12 +11,16 @@ import RxSwift
 
 class EntriesCollectionViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
+    var viewController: UIViewController { return self }
+    
     let paddingBetweenCells: Int = 0
     let numberOfCells: Int = 2
     
     private let bag = DisposeBag()
     
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    var entries = Variable([Entry]())
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,4 +96,11 @@ class EntriesCollectionViewController: UIViewController, UICollectionViewDelegat
         
     }
 
+}
+
+extension EntriesCollectionViewController: ListEntriesUI {
+    
+    func showEntries(entries: [Entry]) {
+        self.entries.value = entries
+    }
 }

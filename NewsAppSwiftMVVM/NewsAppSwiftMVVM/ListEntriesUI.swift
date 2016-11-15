@@ -11,5 +11,4 @@ import RxSwift
 
 protocol ListEntriesUI: BaseUI {
     func showEntries(entries: [Entry])
-    func appendEntries(entries: [Entry])
 }
