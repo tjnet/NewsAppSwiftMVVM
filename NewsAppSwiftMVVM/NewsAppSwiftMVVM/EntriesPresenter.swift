@@ -13,14 +13,17 @@ class EntriesPresenter: BasePresenter {
     
     private let ui: ListEntriesUI
     private let entryStore: EntryStore
+    private let entryWireframe: EntryWireframe
     private let title: String
     
     init(ui: ListEntriesUI,
-         entryStore: EntryStore,
-         title: String
+         entryStore: EntryStore = EntryStoreImpl(),
+         entryWireframe: EntryWireframe = EntryWireframe(),
+         title: String = "top"
         ){
         self.ui = ui
         self.entryStore = entryStore
+        self.entryWireframe = entryWireframe
         self.title = title
     }
 

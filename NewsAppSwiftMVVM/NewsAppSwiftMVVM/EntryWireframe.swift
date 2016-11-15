@@ -19,8 +19,13 @@ class EntryWireframe {
     private var storyboard: UIStoryboard { return UIStoryboard(name: identifiers.sb, bundle: nil) }
     
     func list() -> UIViewController {
+        
         guard let vc = storyboard.instantiateViewController(withIdentifier: identifiers.list) as? EntriesCollectionViewController else { fatalError() }
-        vc.presenter = EntriesPresenter(ui: vc, entryStore: EntryStoreImpl(), title: vc.title!)
+        
+        debugPrint(vc)
+        
+        vc.presenter = EntriesPresenter(ui: vc)
+        
         return UINavigationController(rootViewController: vc)
     }
     

@@ -8,10 +8,10 @@
 
 import UIKit
 import RxSwift
+import Foundation
 
 class EntriesCollectionViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
-    var viewController: UIViewController { return self }
     var presenter: EntriesPresenter!
     
     let paddingBetweenCells: Int = 0
@@ -93,13 +93,13 @@ class EntriesCollectionViewController: UIViewController, UICollectionViewDelegat
         default:
             return CGSize(width: self.view.frame.size.width * 0.5 - 4.0, height: 200)
         }
-        
-        
     }
 
 }
 
+
 extension EntriesCollectionViewController: ListEntriesUI {
+    var viewController: UIViewController { return self }
     
     func showEntries(entries: [Entry]) {
         self.entries.value = entries

@@ -42,7 +42,9 @@ class ViewController: UIViewController {
 //        controllerArray.append(controller1)
         
         let storyboard = UIStoryboard(name: "EntriesCollectionViewController", bundle: nil)
-        let controller1 = storyboard.instantiateViewController(withIdentifier: "EntriesCollectionViewController")
+        //let controller1 = storyboard.instantiateViewController(withIdentifier: "EntriesCollectionViewController")
+        let controller1 = EntryWireframe().list()
+
         controller1.title = "top"
         controllerArray.append(controller1)
         
