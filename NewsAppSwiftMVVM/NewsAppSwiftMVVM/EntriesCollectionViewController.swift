@@ -25,6 +25,7 @@ class EntriesCollectionViewController: UIViewController, UICollectionViewDelegat
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.viewDidLoad()
 
         // Do any additional setup after loading the view.
 //        let items = Observable.just([
