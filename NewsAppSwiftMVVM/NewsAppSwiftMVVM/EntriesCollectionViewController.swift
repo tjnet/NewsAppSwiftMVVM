@@ -10,7 +10,8 @@ import UIKit
 import RxSwift
 import Foundation
 
-class EntriesCollectionViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+
+class EntriesCollectionViewController: UIViewController, UICollectionViewDelegateFlowLayout   {
     
     var presenter: EntriesPresenter!
     
@@ -25,47 +26,14 @@ class EntriesCollectionViewController: UIViewController, UICollectionViewDelegat
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        steupCollectionView()
         presenter.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-//        let items = Observable.just([
-//            Entry(),
-//            Entry(),
-//            Entry()
-//            ])
-//        items
-//            .bindTo(collectionView.rx.items) { (collectionView, row, element) in
-//                let indexPath = IndexPath(row: row, section: 0)
-//                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EntriesCollectionViewCell", for: indexPath) as! EntriesCollectionViewCell
-//                cell.caption?.text = "\(element) @ \(row)"
-//                return cell
-//            }
-//            .addDisposableTo(bag)
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30
-    }
-
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EntriesCollectionViewCell", for: indexPath as IndexPath) as! EntriesCollectionViewCell
-        
-        cell.caption.text = "hoge"
-        return cell
-    }
-    
-    
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        return 1
-    }
-
     
     /*
     // MARK: - Navigation
@@ -86,14 +54,24 @@ class EntriesCollectionViewController: UIViewController, UICollectionViewDelegat
         return 0
     }
     
+    // is this redundant logic?
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         switch(indexPath.row){
         case 0:
             return CGSize(width: self.view.frame.size.width, height: 200)
         default:
-            return CGSize(width: self.view.frame.size.width * 0.5 - 4.0, height: 200)
+            return CGSize(width: self.view.frame.size.width * 0.5, height: 200)
         }
+    }
+    
+    private func steupCollectionView() {
+        
+        entries.asObservable().bindTo(self.collectionView.rx.items(cellIdentifier: "EntriesCollectionViewCell", cellType: EntriesCollectionViewCell.self)) { (row, element, cell) in
+            
+            cell.caption.text = element.title
+            
+        }.addDisposableTo(bag)
     }
 
 }
