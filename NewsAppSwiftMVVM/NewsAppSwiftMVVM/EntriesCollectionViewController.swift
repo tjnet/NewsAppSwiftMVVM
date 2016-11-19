@@ -9,9 +9,10 @@
 import UIKit
 import RxSwift
 import Foundation
+import RxCocoa
 
 
-class EntriesCollectionViewController: UIViewController, UICollectionViewDelegateFlowLayout   {
+class EntriesCollectionViewController: UIViewController {
     
     var presenter: EntriesPresenter!
     
@@ -19,6 +20,7 @@ class EntriesCollectionViewController: UIViewController, UICollectionViewDelegat
     let numberOfCells: Int = 2
     
     private let bag = DisposeBag()
+    private var flowLayout: UICollectionViewFlowLayout! = UICollectionViewFlowLayout()
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -26,7 +28,8 @@ class EntriesCollectionViewController: UIViewController, UICollectionViewDelegat
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        steupCollectionView()
+        setupCollectionView()
+        
         presenter.viewDidLoad()
     }
 
@@ -45,27 +48,9 @@ class EntriesCollectionViewController: UIViewController, UICollectionViewDelegat
     }
     */
 
+    private func setupCollectionView() {
 
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
-        return 1
-    }
-
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
-        return 0
-    }
-    
-    // is this redundant logic?
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        switch(indexPath.row){
-        case 0:
-            return CGSize(width: self.view.frame.size.width, height: 200)
-        default:
-            return CGSize(width: self.view.frame.size.width * 0.5, height: 200)
-        }
-    }
-    
-    private func steupCollectionView() {
+        self.collectionView.delegate = self
         
         entries.asObservable().bindTo(self.collectionView.rx.items(cellIdentifier: "EntriesCollectionViewCell", cellType: EntriesCollectionViewCell.self)) { (row, element, cell) in
             
@@ -73,9 +58,9 @@ class EntriesCollectionViewController: UIViewController, UICollectionViewDelegat
             
         }.addDisposableTo(bag)
     }
+    
 
 }
-
 
 extension EntriesCollectionViewController: ListEntriesUI {
     var viewController: UIViewController { return self }
@@ -83,4 +68,28 @@ extension EntriesCollectionViewController: ListEntriesUI {
     func showEntries(entries: [Entry]) {
         self.entries.value = entries
     }
+}
+
+extension EntriesCollectionViewController: UICollectionViewDelegateFlowLayout {
+    
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let margin: CGFloat = 20.0
+        
+        // see https://possiblemobile.com/2016/05/uicollectionview-dynamic-cell-widths/
+        let height: CGFloat = 200
+        var width: CGFloat
+        
+        switch(indexPath.row){
+        case 0:
+            width = floor(collectionView.frame.size.width - margin)
+        default:
+            width = floor((collectionView.frame.size.width - margin) / 2.0)
+        }
+        
+        return CGSize(width: width, height: 200)
+    }
+
 }
