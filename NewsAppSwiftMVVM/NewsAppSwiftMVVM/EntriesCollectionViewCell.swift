@@ -10,5 +10,14 @@ import UIKit
 
 class EntriesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var caption: UILabel!    
+    @IBOutlet weak var caption: UILabel!
+    
+    func configure(entry: Entry) {
+
+        self.caption.text = entry.title
+        if let thumb = URL(string: entry.thumbnail) {
+            imageView.sd_setImage(with: thumb)
+        }
+        
+    }
 }

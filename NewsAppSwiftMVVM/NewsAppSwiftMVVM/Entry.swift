@@ -14,6 +14,7 @@ class Entry: Object {
     dynamic var title: String = ""
     dynamic var link: String = ""
     dynamic var contentSnippet: String = ""
+    dynamic var thumbnail: String = ""
 }
 
 

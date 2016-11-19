@@ -54,7 +54,9 @@ class EntriesCollectionViewController: UIViewController {
         
         entries.asObservable().bindTo(self.collectionView.rx.items(cellIdentifier: "EntriesCollectionViewCell", cellType: EntriesCollectionViewCell.self)) { (row, element, cell) in
             
-            cell.caption.text = element.title
+//            cell.caption.text = element.title
+            cell.configure(entry: element)
+            
             
         }.addDisposableTo(bag)
     }
