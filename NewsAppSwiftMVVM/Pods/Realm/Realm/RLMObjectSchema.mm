@@ -39,9 +39,6 @@ using namespace realm;
 @end
 
 @implementation RLMObjectSchema {
-    // table accessor optimization
-    realm::TableRef _table;
-    NSArray *_propertiesInDeclaredOrder;
     NSArray *_swiftGenericProperties;
 }
 
@@ -51,19 +48,18 @@ using namespace realm;
     self.properties = properties;
     self.objectClass = objectClass;
     self.accessorClass = objectClass;
-    self.standaloneClass = objectClass;
+    self.unmanagedClass = objectClass;
     return self;
 }
 
 // return properties by name
--(RLMProperty *)objectForKeyedSubscript:(id <NSCopying>)key {
+-(RLMProperty *)objectForKeyedSubscript:(__unsafe_unretained NSString *const)key {
     return _allPropertiesByName[key];
 }
 
 // create property map when setting property array
 -(void)setProperties:(NSArray *)properties {
     _properties = properties;
-    _propertiesInDeclaredOrder = nil;
     [self _propertiesDidChange];
 }
 
@@ -74,7 +70,9 @@ using namespace realm;
 
 - (void)_propertiesDidChange {
     NSMutableDictionary *map = [NSMutableDictionary dictionaryWithCapacity:_properties.count + _computedProperties.count];
+    NSUInteger index = 0;
     for (RLMProperty *prop in _properties) {
+        prop.index = index++;
         map[prop.name] = prop;
         if (prop.isPrimary) {
             self.primaryKeyProperty = prop;
@@ -104,7 +102,7 @@ using namespace realm;
     }
     schema.className = className;
     schema.objectClass = objectClass;
-    schema.accessorClass = RLMDynamicObject.class;
+    schema.accessorClass = objectClass;
     schema.isSwiftClass = isSwift;
 
     // create array of RLMProperties, inserting properties of superclasses first
@@ -119,10 +117,6 @@ using namespace realm;
     NSArray *persistedProperties = [allProperties filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(RLMProperty *property, NSDictionary *) {
         return !RLMPropertyTypeIsComputed(property.type);
     }]];
-    NSUInteger index = 0;
-    for (RLMProperty *prop in persistedProperties) {
-        prop.declarationIndex = index++;
-    }
     schema.properties = persistedProperties;
 
     NSArray *computedProperties = [allProperties filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(RLMProperty *property, NSDictionary *) {
@@ -169,6 +163,16 @@ using namespace realm;
     }
 
     return schema;
+}
+
++ (nullable NSString *)baseNameForLazySwiftProperty:(NSString *)propertyName {
+    // A Swift lazy var shows up as two separate children on the reflection tree: one named 'x', and another that is
+    // optional and is named 'x.storage'. Note that '.' is illegal in either a Swift or Objective-C property name.
+    NSString *const storageSuffix = @".storage";
+    if ([propertyName hasSuffix:storageSuffix]) {
+        return [propertyName substringToIndex:propertyName.length - storageSuffix.length];
+    }
+    return nil;
 }
 
 + (NSArray *)propertiesForClass:(Class)objectClass isSwift:(bool)isSwiftClass {
@@ -267,6 +271,18 @@ using namespace realm;
             }
             if (auto type = RLMCoerceToNil(propertyType)) {
                 if (existing == NSNotFound) {
+                    // Check to see if this optional property is an underlying storage property for a Swift lazy var.
+                    // Managed lazy vars are't allowed.
+                    // NOTE: Revisit this once property behaviors are implemented in Swift.
+                    if (NSString *lazyPropertyBaseName = [self baseNameForLazySwiftProperty:propertyName]) {
+                        if ([ignoredProperties containsObject:lazyPropertyBaseName]) {
+                            // This property is the storage property for a ignored lazy Swift property. Just continue.
+                            return;
+                        } else {
+                            @throw RLMException(@"Lazy managed property '%@' is not allowed on a Realm Swift object class. Either add the property to the ignored properties list or make it non-lazy.", lazyPropertyBaseName);
+                        }
+                    }
+                    // The current property isn't a storage property for a lazy Swift property.
                     property = [[RLMProperty alloc] initSwiftOptionalPropertyWithName:propertyName
                                                                               indexed:[indexed containsObject:propertyName]
                                                                                  ivar:class_getInstanceVariable(objectClass, propertyName.UTF8String)
@@ -304,35 +320,14 @@ using namespace realm;
     schema->_objectClass = _objectClass;
     schema->_className = _className;
     schema->_objectClass = _objectClass;
-    schema->_accessorClass = _accessorClass;
-    schema->_standaloneClass = _standaloneClass;
+    schema->_accessorClass = _objectClass;
+    schema->_unmanagedClass = _unmanagedClass;
     schema->_isSwiftClass = _isSwiftClass;
 
     // call property setter to reset map and primary key
     schema.properties = [[NSArray allocWithZone:zone] initWithArray:_properties copyItems:YES];
     schema.computedProperties = [[NSArray allocWithZone:zone] initWithArray:_computedProperties copyItems:YES];
 
-    // _table not copied as it's realm::Group-specific
-    return schema;
-}
-
-- (instancetype)shallowCopy {
-    RLMObjectSchema *schema = [[RLMObjectSchema alloc] init];
-    schema->_objectClass = _objectClass;
-    schema->_className = _className;
-    schema->_objectClass = _objectClass;
-    schema->_accessorClass = _accessorClass;
-    schema->_standaloneClass = _standaloneClass;
-    schema->_isSwiftClass = _isSwiftClass;
-
-    // reuse property array, map, and primary key instnaces
-    schema->_properties = _properties;
-    schema->_computedProperties = _computedProperties;
-    schema->_allPropertiesByName = _allPropertiesByName;
-    schema->_primaryKeyProperty = _primaryKeyProperty;
-    schema->_swiftGenericProperties = _swiftGenericProperties;
-
-    // _table not copied as it's realm::Group-specific
     return schema;
 }
 
@@ -362,17 +357,6 @@ using namespace realm;
     return [NSString stringWithFormat:@"%@ {\n%@}", self.className, propertiesString];
 }
 
-- (realm::Table *)table {
-    if (!_table) {
-        _table = ObjectStore::table_for_object_type(_realm.group, _className.UTF8String);
-    }
-    return _table.get();
-}
-
-- (void)setTable:(realm::Table *)table {
-    _table.reset(table);
-}
-
 - (realm::ObjectSchema)objectStoreCopy {
     ObjectSchema objectSchema;
     objectSchema.name = _className.UTF8String;
@@ -388,7 +372,7 @@ using namespace realm;
     return objectSchema;
 }
 
-+ (instancetype)objectSchemaForObjectStoreSchema:(realm::ObjectSchema &)objectSchema {
++ (instancetype)objectSchemaForObjectStoreSchema:(realm::ObjectSchema const&)objectSchema {
     RLMObjectSchema *schema = [RLMObjectSchema new];
     schema.className = @(objectSchema.name.c_str());
 
@@ -419,29 +403,9 @@ using namespace realm;
     // for dynamic schema use vanilla RLMDynamicObject accessor classes
     schema.objectClass = RLMObject.class;
     schema.accessorClass = RLMDynamicObject.class;
-    schema.standaloneClass = RLMObject.class;
+    schema.unmanagedClass = RLMObject.class;
     
     return schema;
-}
-
-- (void)sortPropertiesByColumn {
-    _properties = [_properties sortedArrayUsingComparator:^NSComparisonResult(RLMProperty *p1, RLMProperty *p2) {
-        if (p1.column < p2.column) return NSOrderedAscending;
-        if (p1.column > p2.column) return NSOrderedDescending;
-        return NSOrderedSame;
-    }];
-    // No need to update the dictionary
-}
-
-- (NSArray *)propertiesInDeclaredOrder {
-    if (!_propertiesInDeclaredOrder) {
-        _propertiesInDeclaredOrder = [_properties sortedArrayUsingComparator:^NSComparisonResult(RLMProperty *p1, RLMProperty *p2) {
-            if (p1.declarationIndex < p2.declarationIndex) return NSOrderedAscending;
-            if (p1.declarationIndex > p2.declarationIndex) return NSOrderedDescending;
-            return NSOrderedSame;
-        }];
-    }
-    return _propertiesInDeclaredOrder;
 }
 
 - (NSArray *)swiftGenericProperties {
@@ -463,7 +427,7 @@ using namespace realm;
 
     NSMutableArray *genericProperties = [NSMutableArray new];
     for (RLMProperty *prop in _properties) {
-        if (prop->_swiftIvar || prop->_type == RLMPropertyTypeArray) {
+        if (prop->_swiftIvar) {
             [genericProperties addObject:prop];
         }
     }

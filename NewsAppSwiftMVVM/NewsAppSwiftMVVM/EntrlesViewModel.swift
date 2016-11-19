@@ -16,7 +16,9 @@ final class EntriesViewModel {
     
     //MARK: - Model
     
-    var entries: Driver<[Entry]> = Driver.never()
+//    var entries: Driver<[Entry]> = Driver.never()
+    var entries: Observable<[Entry]> = Observable.never()
+    
     
     let service: EntryAPIService
     

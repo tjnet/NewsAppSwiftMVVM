@@ -8,16 +8,16 @@
 
 import RxCocoa
 import RxAlamofire
-
+import RxSwift
 
 class EntryStoreMock: EntryStore {
-    func fetchEntries(query query: String) -> Driver<[Entry]> {
+    func fetchEntries(query: String) -> Observable<[Entry]> {
         
         let entry = Entry()
         entry.title = "title1"
         entry.link = "https://example.com/articles/1"
         entry.contentSnippet = "今日はとてもいい天気..."
         
-        return Driver.just([Entry](arrayLiteral: entry))
+        return Observable.just([Entry](arrayLiteral: entry))
     }
 }

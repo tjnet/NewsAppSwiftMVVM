@@ -13,7 +13,7 @@ import RxAlamofire
 
 
 class EntryAPIService {
-    enum APIError: ErrorType {
+    enum APIError: Error {
         case CannotParse
     }
     
@@ -22,7 +22,7 @@ class EntryAPIService {
     init(entryStore: EntryStore) {
         self.entryStore = entryStore
     }
-    func fetchEntries(query query: String) -> Driver<[Entry]> {
+    func fetchEntries(query: String) -> Observable<[Entry]> {
         return entryStore.fetchEntries(query: query)
     }
     

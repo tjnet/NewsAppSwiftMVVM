@@ -14,11 +14,11 @@ class EntryViewController: UIViewController, UIWebViewDelegate {
     
     @IBOutlet weak var contentWeb: UIWebView!
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         contentWeb.delegate = self
-        contentWeb.loadRequest(NSURLRequest(URL: url))
+        contentWeb.loadRequest(NSURLRequest(url: url as URL) as URLRequest)
         
     }
     
