@@ -83,8 +83,8 @@ extension EntriesCollectionViewController: UICollectionViewDelegateFlowLayout {
         var width: CGFloat
         
         switch(indexPath.row){
-        case 0:
-            width = floor(collectionView.frame.size.width - margin)
+//        case 0:
+//            width = floor(collectionView.frame.size.width - margin)
         default:
             width = floor((collectionView.frame.size.width - margin) / 2.0)
         }

@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -34,26 +35,29 @@
                                             <rect key="frame" x="0.0" y="0.0" width="144" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="UnderComputer-48.png" translatesAutoresizingMaskIntoConstraints="NO" id="FlF-QX-F3x">
-                                                    <frame key="frameInset" minX="26" minY="8" width="48" height="44"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FnK-8z-fde">
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="44" id="Tk0-aJ-CLY"/>
-                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="sEg-iv-Z6W"/>
+                                                        <constraint firstAttribute="height" constant="40" id="U0j-en-jPR"/>
                                                     </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FnK-8z-fde">
-                                                    <frame key="frameInset" minX="29" minY="60" width="42" height="32"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UnderComputer-48.png" translatesAutoresizingMaskIntoConstraints="NO" id="FlF-QX-F3x">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="140" id="2Nk-Pz-rRl"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="FlF-QX-F3x" secondAttribute="trailing" constant="4" id="7kG-ME-abc"/>
-                                            <constraint firstItem="FlF-QX-F3x" firstAttribute="leading" secondItem="AKn-nT-ptT" secondAttribute="leading" constant="4" id="cgl-6k-9ad"/>
-                                            <constraint firstItem="FlF-QX-F3x" firstAttribute="top" secondItem="AKn-nT-ptT" secondAttribute="top" id="nzl-r2-qIW"/>
+                                            <constraint firstItem="FlF-QX-F3x" firstAttribute="leading" secondItem="AKn-nT-ptT" secondAttribute="leading" id="29q-xc-ebc"/>
+                                            <constraint firstItem="FnK-8z-fde" firstAttribute="leading" secondItem="AKn-nT-ptT" secondAttribute="leadingMargin" constant="-8" id="6vq-5h-Vce"/>
+                                            <constraint firstItem="FnK-8z-fde" firstAttribute="width" secondItem="AKn-nT-ptT" secondAttribute="width" id="72p-0w-Pfc"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="FnK-8z-fde" secondAttribute="bottom" constant="-8" id="AOb-n1-ksA"/>
+                                            <constraint firstItem="FnK-8z-fde" firstAttribute="top" secondItem="AKn-nT-ptT" secondAttribute="topMargin" constant="152" id="Bkd-VI-H9n"/>
+                                            <constraint firstAttribute="trailing" secondItem="FlF-QX-F3x" secondAttribute="trailing" id="bpH-rR-a5D"/>
+                                            <constraint firstItem="FlF-QX-F3x" firstAttribute="top" secondItem="AKn-nT-ptT" secondAttribute="top" id="gUY-3a-AcW"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="caption" destination="FnK-8z-fde" id="E4B-gU-5FN"/>
