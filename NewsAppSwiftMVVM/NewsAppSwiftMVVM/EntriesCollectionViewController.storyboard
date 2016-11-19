@@ -51,13 +51,13 @@
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="FlF-QX-F3x" firstAttribute="leading" secondItem="AKn-nT-ptT" secondAttribute="leading" id="29q-xc-ebc"/>
+                                            <constraint firstItem="FlF-QX-F3x" firstAttribute="leading" secondItem="AKn-nT-ptT" secondAttribute="leading" constant="2" id="29q-xc-ebc"/>
                                             <constraint firstItem="FnK-8z-fde" firstAttribute="leading" secondItem="AKn-nT-ptT" secondAttribute="leadingMargin" constant="-8" id="6vq-5h-Vce"/>
                                             <constraint firstItem="FnK-8z-fde" firstAttribute="width" secondItem="AKn-nT-ptT" secondAttribute="width" id="72p-0w-Pfc"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="FnK-8z-fde" secondAttribute="bottom" constant="-8" id="AOb-n1-ksA"/>
                                             <constraint firstItem="FnK-8z-fde" firstAttribute="top" secondItem="AKn-nT-ptT" secondAttribute="topMargin" constant="152" id="Bkd-VI-H9n"/>
-                                            <constraint firstAttribute="trailing" secondItem="FlF-QX-F3x" secondAttribute="trailing" id="bpH-rR-a5D"/>
-                                            <constraint firstItem="FlF-QX-F3x" firstAttribute="top" secondItem="AKn-nT-ptT" secondAttribute="top" id="gUY-3a-AcW"/>
+                                            <constraint firstAttribute="trailing" secondItem="FlF-QX-F3x" secondAttribute="trailing" constant="2" id="bpH-rR-a5D"/>
+                                            <constraint firstItem="FlF-QX-F3x" firstAttribute="top" secondItem="AKn-nT-ptT" secondAttribute="top" constant="10" id="gUY-3a-AcW"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="caption" destination="FnK-8z-fde" id="E4B-gU-5FN"/>

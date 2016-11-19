@@ -26,7 +26,7 @@ class EntryWireframe {
         
         vc.presenter = EntriesPresenter(ui: vc)
         
-        return UINavigationController(rootViewController: vc)
+        return vc
     }
     
 }
