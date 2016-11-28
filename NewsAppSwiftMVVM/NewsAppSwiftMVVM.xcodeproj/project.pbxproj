@@ -28,6 +28,7 @@
 		684EAA101DDB5DF800B7D971 /* EntryWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684EAA0F1DDB5DF800B7D971 /* EntryWireframe.swift */; };
 		685B169D1CF5EB5E0065A66C /* EntryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685B169C1CF5EB5E0065A66C /* EntryTests.swift */; };
 		685B169F1CF5EE6B0065A66C /* EntryAPIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685B169E1CF5EE6B0065A66C /* EntryAPIServiceTests.swift */; };
+		685E3B6D1DEC746800F44B4C /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685E3B6C1DEC746800F44B4C /* PinterestLayout.swift */; };
 		68691BA31D93FDF600843AC9 /* EntriesTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68691BA11D93FDF600843AC9 /* EntriesTableViewController.storyboard */; };
 		68691BAC1D94267700843AC9 /* EntryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68691BAB1D94267700843AC9 /* EntryViewController.storyboard */; };
 		68691BAE1D9427D200843AC9 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68691BAD1D9427D200843AC9 /* EntryViewController.swift */; };
@@ -96,6 +97,7 @@
 		684EAA0F1DDB5DF800B7D971 /* EntryWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryWireframe.swift; sourceTree = "<group>"; };
 		685B169C1CF5EB5E0065A66C /* EntryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryTests.swift; sourceTree = "<group>"; };
 		685B169E1CF5EE6B0065A66C /* EntryAPIServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryAPIServiceTests.swift; sourceTree = "<group>"; };
+		685E3B6C1DEC746800F44B4C /* PinterestLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
 		68691BA21D93FDF600843AC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/EntriesTableViewController.storyboard; sourceTree = "<group>"; };
 		68691BAB1D94267700843AC9 /* EntryViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EntryViewController.storyboard; sourceTree = "<group>"; };
 		68691BAD1D9427D200843AC9 /* EntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
@@ -203,6 +205,14 @@
 			name = ViewModel;
 			sourceTree = "<group>";
 		};
+		685E3B6B1DEC73E500F44B4C /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				685E3B6C1DEC746800F44B4C /* PinterestLayout.swift */,
+			);
+			name = Layouts;
+			sourceTree = "<group>";
+		};
 		68C544311CE361850040AC49 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,6 +304,7 @@
 		68FBF7961CE2302900A3D7C9 /* NewsAppSwiftMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				685E3B6B1DEC73E500F44B4C /* Layouts */,
 				680B0B011DD36B610007EB99 /* BasePresenter.swift */,
 				687CBB661DCECD2F00AF6F23 /* CAPSPageMenu.swift */,
 				680B0B071DD370140007EB99 /* BaseUI.swift */,
@@ -657,6 +668,7 @@
 				680B0B041DD36DD00007EB99 /* EntriesPresenter.swift in Sources */,
 				6813800F1D3CC27200018040 /* EntryStoreMock.swift in Sources */,
 				684CF4561D1C274C00CAB7B2 /* EntryAPIService.swift in Sources */,
+				685E3B6D1DEC746800F44B4C /* PinterestLayout.swift in Sources */,
 				687CBB671DCECD2F00AF6F23 /* CAPSPageMenu.swift in Sources */,
 				684EAA101DDB5DF800B7D971 /* EntryWireframe.swift in Sources */,
 				68084E011D963F23002A491E /* SettingsViewController.swift in Sources */,
