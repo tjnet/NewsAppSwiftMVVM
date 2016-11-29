@@ -30,7 +30,7 @@ class EntriesLayout: UICollectionViewLayout {
     
     private var contentWidth: CGFloat {
         let insets = collectionView!.contentInset
-        return CGRectGetWidth(collectionView!.bounds) - (insets.left + insets.right)
+        return collectionView!.bounds.width - (insets.left + insets.right)
     }
     
     
