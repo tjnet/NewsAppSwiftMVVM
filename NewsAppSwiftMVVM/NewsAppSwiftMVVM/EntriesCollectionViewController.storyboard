@@ -35,11 +35,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="144" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FnK-8z-fde">
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="U0j-en-jPR"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FnK-8z-fde">
+                                                    <frame key="frameInset" minX="10" minY="150" width="144" height="40"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -52,12 +50,12 @@
                                         </view>
                                         <constraints>
                                             <constraint firstItem="FlF-QX-F3x" firstAttribute="leading" secondItem="AKn-nT-ptT" secondAttribute="leading" constant="2" id="29q-xc-ebc"/>
-                                            <constraint firstItem="FnK-8z-fde" firstAttribute="leading" secondItem="AKn-nT-ptT" secondAttribute="leadingMargin" constant="-8" id="6vq-5h-Vce"/>
-                                            <constraint firstItem="FnK-8z-fde" firstAttribute="width" secondItem="AKn-nT-ptT" secondAttribute="width" id="72p-0w-Pfc"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="FnK-8z-fde" secondAttribute="bottom" constant="-8" id="AOb-n1-ksA"/>
-                                            <constraint firstItem="FnK-8z-fde" firstAttribute="top" secondItem="AKn-nT-ptT" secondAttribute="topMargin" constant="152" id="Bkd-VI-H9n"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="FnK-8z-fde" secondAttribute="bottom" constant="2" id="AOb-n1-ksA"/>
+                                            <constraint firstItem="FnK-8z-fde" firstAttribute="leading" secondItem="AKn-nT-ptT" secondAttribute="leading" constant="2" id="ITS-G2-qpZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="FnK-8z-fde" secondAttribute="trailing" constant="2" id="P2Y-q3-dIe"/>
                                             <constraint firstAttribute="trailing" secondItem="FlF-QX-F3x" secondAttribute="trailing" constant="2" id="bpH-rR-a5D"/>
                                             <constraint firstItem="FlF-QX-F3x" firstAttribute="top" secondItem="AKn-nT-ptT" secondAttribute="top" constant="10" id="gUY-3a-AcW"/>
+                                            <constraint firstItem="FnK-8z-fde" firstAttribute="top" secondItem="FlF-QX-F3x" secondAttribute="bottom" constant="2" id="rbs-Pq-WFT"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="caption" destination="FnK-8z-fde" id="E4B-gU-5FN"/>
@@ -69,9 +67,11 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="g1b-ym-1d2" firstAttribute="leading" secondItem="KuQ-NS-mK4" secondAttribute="leading" constant="10" id="5JP-XV-YIF"/>
+                            <constraint firstAttribute="trailing" secondItem="g1b-ym-1d2" secondAttribute="trailing" constant="10" id="KH4-5A-C5k"/>
                             <constraint firstItem="g1b-ym-1d2" firstAttribute="centerY" secondItem="KuQ-NS-mK4" secondAttribute="centerY" id="MEF-pu-mjd"/>
-                            <constraint firstItem="g1b-ym-1d2" firstAttribute="width" secondItem="KuQ-NS-mK4" secondAttribute="width" id="Mle-8O-Nhh"/>
-                            <constraint firstItem="g1b-ym-1d2" firstAttribute="height" secondItem="KuQ-NS-mK4" secondAttribute="height" id="mSs-CQ-YeW"/>
+                            <constraint firstItem="g1b-ym-1d2" firstAttribute="top" secondItem="KuQ-NS-mK4" secondAttribute="top" id="gzo-8x-Ffl"/>
+                            <constraint firstItem="adO-sD-1EE" firstAttribute="top" secondItem="g1b-ym-1d2" secondAttribute="bottom" id="q4K-EG-7S2"/>
                             <constraint firstItem="g1b-ym-1d2" firstAttribute="centerX" secondItem="KuQ-NS-mK4" secondAttribute="centerX" id="wnx-lQ-jyt"/>
                         </constraints>
                     </view>

@@ -28,4 +28,18 @@ class EntriesCollectionViewCell: UICollectionViewCell {
         
         return rect.size.height;
     }
+    
+    class func titleHeightWithText(_ titleText: String, cellWidth: CGFloat) -> CGFloat {
+        let padding: CGFloat = 1.0
+        let width: CGFloat = (cellWidth - padding * 2)
+        let font = UIFont.systemFont(ofSize: 14.0)
+        let attributes = [NSFontAttributeName:font]
+        
+        let titleRect: CGRect = (titleText as NSString).boundingRect(with: CGSize(width: width, height: CGFloat.greatestFiniteMagnitude),
+                                                                     options: NSStringDrawingOptions.usesLineFragmentOrigin,
+                                                                     attributes: attributes,
+                                                                     context: nil)
+        
+        return padding + ceil(titleRect.size.height) + padding
+    }
 }

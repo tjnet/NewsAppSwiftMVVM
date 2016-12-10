@@ -95,8 +95,11 @@ extension EntriesCollectionViewController: EntriesCollectionViewLayoutDelegate {
         
     }
     
-    func heightForBodyAtIndexPath(_ collectionView: UICollectionView,indexPath: IndexPath,width: CGFloat) -> CGFloat {
-        return 0.0
+    func heightForTitleAtIndexPath(_ collectionView: UICollectionView,indexPath: IndexPath,width: CGFloat) -> CGFloat {
+        let entry = entries.value[indexPath.item]
+        
+        return EntriesCollectionViewCell.titleHeightWithText(entry.title, cellWidth: width)
+
     }
     
 }

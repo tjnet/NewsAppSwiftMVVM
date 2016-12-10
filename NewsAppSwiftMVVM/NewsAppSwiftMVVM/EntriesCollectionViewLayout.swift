@@ -10,7 +10,7 @@ import UIKit
 
 protocol EntriesCollectionViewLayoutDelegate {
     func heightForPhotoAtIndexPath(_ collectionView: UICollectionView, indexPath: IndexPath, width: CGFloat) -> CGFloat
-    func heightForBodyAtIndexPath(_ collectionView: UICollectionView,indexPath: IndexPath,width: CGFloat) -> CGFloat
+    func heightForTitleAtIndexPath(_ collectionView: UICollectionView,indexPath: IndexPath,width: CGFloat) -> CGFloat
     
     
 }
@@ -68,16 +68,21 @@ class EntriesCollectionViewLayout: UICollectionViewLayout {
             currentCellOriginYList.append(0.0)
         }
         
+        let itemCount = self.collectionView!.numberOfItems(inSection: 0)
         
-        for item in 0..<self.collectionView!.numberOfItems(inSection: 0) {
+        /*
+         * Section items
+         */
+        
+        for item in 0..<itemCount {
             let indexPath : IndexPath = IndexPath(row: item, section: 0)
             
             let imageHeight: CGFloat  = self.delegate.heightForPhotoAtIndexPath(
                 self.collectionView!, indexPath: indexPath, width: cellWidth)
             
-            let bodyHeight: CGFloat  = self.delegate.heightForBodyAtIndexPath(
+            let titleHeight: CGFloat  = self.delegate.heightForTitleAtIndexPath(
                 self.collectionView!, indexPath: indexPath, width: cellWidth)
-            let cellHeight: CGFloat  = imageHeight + bodyHeight
+            let cellHeight: CGFloat  = imageHeight + titleHeight
             
             let cellFrame: CGRect = CGRect(x: cellOriginXList[column],
                                            y: currentCellOriginYList[column],
@@ -105,9 +110,6 @@ class EntriesCollectionViewLayout: UICollectionViewLayout {
             
             column = nextColumn;
         }
-        
-        
     }
-    
     
 }
