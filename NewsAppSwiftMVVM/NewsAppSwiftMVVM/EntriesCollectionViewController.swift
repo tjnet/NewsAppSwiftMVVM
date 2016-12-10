@@ -18,9 +18,11 @@ class EntriesCollectionViewController: UIViewController {
     
     let paddingBetweenCells: Int = 0
     let numberOfCells: Int = 2
-    
+
     private let bag = DisposeBag()
-    private var flowLayout: UICollectionViewFlowLayout! = UICollectionViewFlowLayout()
+//    private var flowLayout: UICollectionViewFlowLayout! = UICollectionViewFlowLayout()
+    
+     let entriesCollectionViewLayout = EntriesCollectionViewLayout()
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -49,12 +51,13 @@ class EntriesCollectionViewController: UIViewController {
     */
 
     private func setupCollectionView() {
-
-        self.collectionView.delegate = self
+        
+        collectionView.collectionViewLayout = entriesCollectionViewLayout
+        
+        entriesCollectionViewLayout.delegate = self
         
         entries.asObservable().bindTo(self.collectionView.rx.items(cellIdentifier: "EntriesCollectionViewCell", cellType: EntriesCollectionViewCell.self)) { (row, element, cell) in
             
-//            cell.caption.text = element.title
             cell.configure(entry: element)
             
             
@@ -72,26 +75,28 @@ extension EntriesCollectionViewController: ListEntriesUI {
     }
 }
 
-extension EntriesCollectionViewController: UICollectionViewDelegateFlowLayout {
-    
-    
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+
+// MARK: - PhotoCollectionViewLayoutDelegate
+extension EntriesCollectionViewController: EntriesCollectionViewLayoutDelegate {
+    func heightForPhotoAtIndexPath(_ collectionView :UICollectionView,indexPath :IndexPath,width :CGFloat) -> CGFloat {
         
-        let margin: CGFloat = 20.0
+        let items =  entries.value
+        let entry = items[indexPath.item]
         
-        // see https://possiblemobile.com/2016/05/uicollectionview-dynamic-cell-widths/
-        let height: CGFloat = 200
-        var width: CGFloat
-        
-        switch(indexPath.row){
-//        case 0:
-//            width = floor(collectionView.frame.size.width - margin)
-        default:
-            width = floor((collectionView.frame.size.width - margin) / 2.0)
+        if let url = NSURL(string: entry.thumbnail) {
+            if let data = NSData(contentsOf: url as URL){
+                if let image = UIImage(data : data as Data) {
+                    return EntriesCollectionViewCell.imageHeightWithImage(image, cellWidth: width)
+                }
+            }
         }
         
-        return CGSize(width: width, height: 200)
+        return 0.0
+        
     }
-
+    
+    func heightForBodyAtIndexPath(_ collectionView: UICollectionView,indexPath: IndexPath,width: CGFloat) -> CGFloat {
+        return 0.0
+    }
+    
 }
