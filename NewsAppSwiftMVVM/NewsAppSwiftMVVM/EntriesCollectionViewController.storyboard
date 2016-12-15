@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="g1b-ym-1d2">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="2" id="kbu-TH-Gnk">
                                     <size key="itemSize" width="144" height="200"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -48,6 +48,7 @@
                                                 </imageView>
                                             </subviews>
                                         </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="FlF-QX-F3x" firstAttribute="leading" secondItem="AKn-nT-ptT" secondAttribute="leading" constant="2" id="29q-xc-ebc"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="FnK-8z-fde" secondAttribute="bottom" constant="2" id="AOb-n1-ksA"/>
@@ -57,6 +58,11 @@
                                             <constraint firstItem="FlF-QX-F3x" firstAttribute="top" secondItem="AKn-nT-ptT" secondAttribute="top" constant="10" id="gUY-3a-AcW"/>
                                             <constraint firstItem="FnK-8z-fde" firstAttribute="top" secondItem="FlF-QX-F3x" secondAttribute="bottom" constant="2" id="rbs-Pq-WFT"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="caption" destination="FnK-8z-fde" id="E4B-gU-5FN"/>
                                             <outlet property="imageView" destination="FlF-QX-F3x" id="HZB-Zy-9Rj"/>
@@ -65,7 +71,7 @@
                                 </cells>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="g1b-ym-1d2" firstAttribute="leading" secondItem="KuQ-NS-mK4" secondAttribute="leading" constant="10" id="5JP-XV-YIF"/>
                             <constraint firstAttribute="trailing" secondItem="g1b-ym-1d2" secondAttribute="trailing" constant="10" id="KH4-5A-C5k"/>
